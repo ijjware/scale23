@@ -1,0 +1,10 @@
+Marker3D
+CollisionShape3D
+CharacterBody3D
+PinJoint3D
+MeshInstance3D
+RigidBody3D
+SoftBody3D
+SliderJoint3D
+ConeTwistJoint3D
+Camera3D

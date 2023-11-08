@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cupxfxnv2xsx4"]
+
+[ext_resource type="Script" path="res://char.gd" id="1_6aq4j"]
+[ext_resource type="Script" path="res://Camera3D.gd" id="2_nph8w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hb6pi"]
+size = Vector3(10.0931, 1, 11.6033)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lkmkd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t0cr0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="."]
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2"]
+shape = SubResource("BoxShape3D_hb6pi")
+
+[node name="RigidBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86329, 0)
+script = ExtResource("1_6aq4j")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_lkmkd")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_t0cr0")
+
+[node name="Marker3D" type="Marker3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56723, 3)
+metadata/_edit_lock_ = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.708044, 0.706168, 0, -0.706168, 0.708044, 0, 4.41774, 3)
+fov = 37.8493
+script = ExtResource("2_nph8w")
