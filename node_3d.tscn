@@ -15,16 +15,15 @@ freeze = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 shape = SubResource("BoxShape3D_hb6pi")
 
-[node name="Node3D" parent="." instance=ExtResource("1_ot05y")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.86329, 0)
+[node name="PC" parent="." instance=ExtResource("1_ot05y")]
+transform = Transform3D(-0.000951192, 0, 0.499999, 0, 0.5, 0, -0.499999, 0, -0.000951192, 0, 1.86329, 0)
 script = ExtResource("1_rb0lc")
 
-[node name="followDAD" type="Marker3D" parent="Node3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+[node name="followDAD" type="Marker3D" parent="PC"]
 
-[node name="Marker3D" type="Marker3D" parent="Node3D/followDAD"]
-transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, 4.31646, 3.24872, -1.88678e-07)
+[node name="Marker3D" type="Marker3D" parent="PC/followDAD"]
+transform = Transform3D(-0.00190238, 0.707106, -0.707106, 0, 0.707107, 0.707107, 0.999998, 0.00134519, -0.00134519, -9.99998, 6.27342, -0.0190238)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.708044, 0.706168, 0, -0.706168, 0.708044, 0, 5.11201, 4.31646)
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5, 5)
 script = ExtResource("2_6skst")

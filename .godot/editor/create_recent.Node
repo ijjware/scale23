@@ -1,5 +1,7 @@
-Marker3D
 CollisionShape3D
+PhysicalBone3D
+Skeleton3D
+Marker3D
 CharacterBody3D
 PinJoint3D
 MeshInstance3D

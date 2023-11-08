@@ -1,11 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699415290
+::res://::1699422073
 arm.obj::Mesh::1479913158265835752::1699411716::1699411716::1::::<><>::
 Camera.gd::GDScript::-1::1699414587::0::1::::<>Camera3D<>::
+guy.blend::PackedScene::7741644639865357243::1699421882::1699422147::1::::<><>::
 head.obj::Mesh::1570833808854483240::1699413726::1699413726::1::::<><>::
 icon.svg::CompressedTexture2D::4493333416296028578::1698972701::1698972717::1::::<><>::
 leg.obj::Mesh::1620814163788996778::1699413608::1699413608::1::::<><>::
-node_3d.tscn::PackedScene::6208990555371560891::1699415147::0::1::::<><>::uid://b4qjpgl851exb::::res://PC.tscn<>res://PC.gd<>res://Camera.gd
+node_3d.tscn::PackedScene::6208990555371560891::1699415837::0::1::::<><>::uid://b4qjpgl851exb::::res://PC.tscn<>res://PC.gd<>res://Camera.gd
+PC2.tscn::PackedScene::4836083040519574484::1699417408::0::1::::<><>::uid://c8etgex70k17o
 PC.gd::GDScript::-1::1699323312::0::1::::<>CharacterBody3D<>::
-PC.tscn::PackedScene::4455500766777904047::1699415057::0::1::::<><>::uid://c8etgex70k17o::::res://torso.obj<>uid://vc47oikscyay::::res://arm.obj<>uid://xdetp1rg6haw::::res://leg.obj<>uid://wm6nyiqt86sq::::res://head.obj
+PC.tscn::PackedScene::4455500766777904047::1699417409::0::1::::<><>::uid://c8etgex70k17o::::res://torso.obj<>uid://vc47oikscyay::::res://arm.obj<>uid://xdetp1rg6haw::::res://leg.obj<>uid://wm6nyiqt86sq::::res://head.obj
 torso.obj::Mesh::7098495303195170390::1699411633::1699411640::1::::<><>::
