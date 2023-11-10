@@ -1,7 +1,7 @@
 extends Camera3D
 
-@onready var marker = $"../Node3D/followDAD/Marker3D"
-@onready var follow = $"../Node3D"
+@onready var marker = $"../CharacterBody3D/followDAD/Marker3D"
+@onready var follow = $"../CharacterBody3D"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
