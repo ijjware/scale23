@@ -2,26 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd03wtn75r5o2"
-path="res://.godot/imported/GuySprite _Sheet_.png-b8b8a2c4dc3dfb305b3e4e9b93e6b21b.ctex"
+uid="uid://dw5fy8tyxl7qn"
+path.s3tc="res://.godot/imported/GuySprite.aseprite.png-2daced00c120e9838e72a9fa728a6f54.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://textures/GuySprite _Sheet_.png"
-dest_files=["res://.godot/imported/GuySprite _Sheet_.png-b8b8a2c4dc3dfb305b3e4e9b93e6b21b.ctex"]
+source_file="res://Blends/textures/GuySprite.aseprite.png"
+dest_files=["res://.godot/imported/GuySprite.aseprite.png-2daced00c120e9838e72a9fa728a6f54.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

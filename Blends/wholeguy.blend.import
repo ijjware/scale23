@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bgxcp32sx6v0"
-path="res://.godot/imported/wholeguy.blend-79dc72726f0602bc4866aad872d88ba0.scn"
+path="res://.godot/imported/wholeguy.blend-1f16bedfbef60df5f98eeeb3c358a670.scn"
 
 [deps]
 
-source_file="res://wholeguy.blend"
-dest_files=["res://.godot/imported/wholeguy.blend-79dc72726f0602bc4866aad872d88ba0.scn"]
+source_file="res://Blends/wholeguy.blend"
+dest_files=["res://.godot/imported/wholeguy.blend-1f16bedfbef60df5f98eeeb3c358a670.scn"]
 
 [params]
 

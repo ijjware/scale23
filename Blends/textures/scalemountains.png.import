@@ -2,26 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxxgxpp6yw510"
-path="res://.godot/imported/GuySprite.001.png-da1207523ef65e4d138fedcd59859cdb.ctex"
+uid="uid://d00cmwox0tyxw"
+path.s3tc="res://.godot/imported/scalemountains.png-a3a10001a74a763d497892f0ae42ee45.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://textures/GuySprite.001.png"
-dest_files=["res://.godot/imported/GuySprite.001.png-da1207523ef65e4d138fedcd59859cdb.ctex"]
+source_file="res://Blends/textures/scalemountains.png"
+dest_files=["res://.godot/imported/scalemountains.png-a3a10001a74a763d497892f0ae42ee45.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

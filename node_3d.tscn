@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://cupxfxnv2xsx4"]
 
-[ext_resource type="Script" path="res://PC.gd" id="1_rb0lc"]
-[ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://scalemountains.blend" id="1_ua2uu"]
+[ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="1_ua2uu"]
 [ext_resource type="Script" path="res://Camera.gd" id="2_6skst"]
-[ext_resource type="PackedScene" uid="uid://bgxcp32sx6v0" path="res://wholeguy.blend" id="4_f8m8a"]
+[ext_resource type="Script" path="res://Scripts/PC.gd" id="2_svvhl"]
+[ext_resource type="PackedScene" uid="uid://bgxcp32sx6v0" path="res://Blends/wholeguy.blend" id="4_f8m8a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hb6pi"]
 size = Vector3(434.938, 1.75516, 883.664)
@@ -26,13 +26,9 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.320442, -70.4001, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32122, 43.4665, -49.8402)
 emission_colors = PackedColorArray(0.827451, 0.180392, 0, 1)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 5, 5)
-script = ExtResource("2_6skst")
-
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03437, 0)
-script = ExtResource("1_rb0lc")
+script = ExtResource("2_svvhl")
 
 [node name="followDAD" type="Marker3D" parent="CharacterBody3D"]
 transform = Transform3D(-0.000951192, 0, 0.499999, 0, 0.5, 0, -0.499999, 0, -0.000951192, -3.65497, 5.79076, 0)
@@ -45,3 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38757, 0)
 shape = SubResource("BoxShape3D_3fb2p")
 
 [node name="wholeguy" parent="CharacterBody3D" instance=ExtResource("4_f8m8a")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 5, 5)
+script = ExtResource("2_6skst")

@@ -1,22 +1,26 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699595617
-arm.obj::Mesh::1479913158265835752::1699411716::1699411716::1::::<><>::
-Camera.gd::GDScript::-1::1699595428::0::1::::<>Camera3D<>::
-canyon1.png::CompressedTexture2D::2612438194045120045::1699424265::1699424309::1::::<><>::
-guy.blend::PackedScene::7741644639865357243::1699421882::1699422147::1::::<><>::
-head.obj::Mesh::1570833808854483240::1699413726::1699413726::1::::<><>::
-icon.svg::CompressedTexture2D::4493333416296028578::1698972701::1698972717::1::::<><>::
-leg.obj::Mesh::1620814163788996778::1699413608::1699413608::1::::<><>::
-node_3d.tscn::PackedScene::6208990555371560891::1699595617::0::1::::<><>::res://PC.gd<>uid://djofc4nb5tu2f::::res://scalemountains.blend<>res://Camera.gd<>uid://bgxcp32sx6v0::::res://wholeguy.blend
-PC.gd::GDScript::-1::1699423560::0::1::::<>CharacterBody3D<>::
-PC.tscn::PackedScene::4455500766777904047::1699417409::0::1::::<><>::uid://c8etgex70k17o
-scalemountains.blend::PackedScene::7820171632275981507::1699594550::1699594551::1::::<><>::uid://bh7i4j0hoy4d7
-torso.obj::Mesh::7098495303195170390::1699411633::1699411640::1::::<><>::
-wholeguy.blend::PackedScene::83976004940356375::1699589631::1699595597::1::::<><>::uid://5nkiogmr1fjo::::res://textures/GuySprite.aseprite.png
-::res://textures/::1699595594
-GuySprite _Sheet_.png::CompressedTexture2D::5036757724935999511::1699595594::1699595629::1::::<><>::
-GuySprite.001.png::CompressedTexture2D::4048650963391421013::1699595594::1699595629::1::::<><>::
-GuySprite.aseprite.png::CompressedTexture2D::2133124421387351732::1699589637::1699589642::1::::<><>::
-GuySprite.png::CompressedTexture2D::5718275568150909923::1699595594::1699595629::1::::<><>::
-scalemountains.png::CompressedTexture2D::5197124483682534519::1699594706::1699594876::1::::<><>::
-Sprite.png::CompressedTexture2D::4089615870570449447::1699593888::1699593890::1::::<><>::
+::res://::1699761440
+canyon1.png::CompressedTexture2D::2612438194045120045::1699596257::1699596257::1::::<><>::
+icon.svg::CompressedTexture2D::4493333416296028578::1699415642::1699760880::1::::<><>::
+node_3d.tscn::PackedScene::6208990555371560891::1699761438::0::1::::<><>::uid://djofc4nb5tu2f::::res://Blends/scalemountains.blend<>res://Camera.gd<>res://Scripts/PC.gd<>uid://bgxcp32sx6v0::::res://Blends/wholeguy.blend
+::res://Blends/::1699761386
+guy.blend::PackedScene::7741644639865357243::1699422272::1699761386::1::::<><>::
+scalemountains.blend::PackedScene::7820171632275981507::1699760823::1699761381::1::::<><>::
+wholeguy.blend::PackedScene::83976004940356375::1699760820::1699761498::1::::<><>::uid://dw5fy8tyxl7qn::::res://Blends/textures/GuySprite.aseprite.png
+::res://Blends/textures/::1699761386
+GuySprite _Sheet_.png::CompressedTexture2D::8422268998656340525::1699761372::1699761380::1::::<><>::
+GuySprite.001.png::CompressedTexture2D::6632060038514842803::1699761372::1699761380::1::::<><>::
+GuySprite.aseprite.png::CompressedTexture2D::8765696151498853173::1699761372::1699761496::1::::<><>::
+GuySprite.png::CompressedTexture2D::912899586163225155::1699761372::1699761380::1::::<><>::
+scalemountains.png::CompressedTexture2D::8965736627614162316::1699761381::1699761501::1::::<><>::
+::res://Character/::1699761354
+::res://Scripts/::1699761440
+Camera.gd::GDScript::-1::1699760823::0::1::::<>Camera3D<>::
+PC.gd::GDScript::-1::1699596254::0::1::::<>CharacterBody3D<>::
+::res://textures/::1699760823
+GuySprite _Sheet_.png::CompressedTexture2D::5757597555073402281::1699596257::1699760823::1::::<><>::
+GuySprite.001.png::CompressedTexture2D::8414288627856432079::1699596257::1699760823::1::::<><>::
+GuySprite.aseprite.png::CompressedTexture2D::2133124421387351732::1699596257::1699596257::1::::<><>::
+GuySprite.png::CompressedTexture2D::627725930081725980::1699596257::1699760823::1::::<><>::
+scalemountains.png::CompressedTexture2D::5197124483682534519::1699760823::1699760823::1::::<><>::
+Sprite.png::CompressedTexture2D::4089615870570449447::1699760823::1699760823::1::::<><>::

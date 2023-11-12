@@ -3,10 +3,6 @@
 		"generator":"Khronos glTF Blender I/O v3.6.28",
 		"version":"2.0"
 	},
-	"extensionsUsed":[
-		"KHR_materials_specular",
-		"KHR_materials_ior"
-	],
 	"scene":0,
 	"scenes":[
 		{
@@ -14,13 +10,7 @@
 				"sb_state":{
 					"action_preview":null,
 					"action_preview_enabled":0,
-					"_identifier":"6a329861",
-					"uv_color":[
-						0.0,
-						0.0,
-						0.0,
-						0.44999998807907104
-					]
+					"_identifier":"3e40169f"
 				}
 			},
 			"name":"Scene",
@@ -37,42 +27,36 @@
 				}
 			},
 			"mesh":0,
-			"name":"wholeguy",
+			"name":"scalemountains",
 			"rotation":[
 				0.70710688829422,
 				0,
 				0,
 				0.7071066498756409
+			],
+			"scale":[
+				14.115025520324707,
+				14.115025520324707,
+				14.115025520324707
 			]
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"extensions":{
-				"KHR_materials_specular":{
-					"specularColorFactor":[
-						0,
-						0,
-						0
-					]
-				},
-				"KHR_materials_ior":{
-					"ior":1.4500000476837158
-				}
-			},
-			"name":"wholeguy_mtl",
+			"name":"Material",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
 				},
-				"metallicFactor":0
+				"metallicFactor":0,
+				"roughnessFactor":0.5
 			}
 		}
 	],
 	"meshes":[
 		{
-			"name":"wholeguy",
+			"name":"scalemountains",
 			"primitives":[
 				{
 					"attributes":{
@@ -95,69 +79,69 @@
 	"images":[
 		{
 			"mimeType":"image/png",
-			"name":"GuySprite.aseprite",
-			"uri":"../../textures/GuySprite.aseprite.png"
+			"name":"scalemountains.png",
+			"uri":"../../Blends/textures/scalemountains.png"
 		}
 	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":632,
+			"count":382,
 			"max":[
-				1.4495999813079834,
-				3.5,
-				0.75
+				3,
+				4,
+				0.5
 			],
 			"min":[
-				-5,
-				-3.5,
-				-6.677299976348877
+				-3.2070999145507812,
+				-4,
+				-3.25
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":632,
+			"count":382,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":632,
+			"count":382,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":1026,
+			"count":588,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":7584,
+			"byteLength":4584,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":7584,
-			"byteOffset":7584,
+			"byteLength":4584,
+			"byteOffset":4584,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":5056,
-			"byteOffset":15168,
+			"byteLength":3056,
+			"byteOffset":9168,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2052,
-			"byteOffset":20224,
+			"byteLength":1176,
+			"byteOffset":12224,
 			"target":34963
 		}
 	],
@@ -169,8 +153,8 @@
 	],
 	"buffers":[
 		{
-			"byteLength":22276,
-			"uri":"wholeguy-79dc72726f0602bc4866aad872d88ba0.bin"
+			"byteLength":13400,
+			"uri":"scalemountains-9c7e98115568e13d5570cc29f29c170c.bin"
 		}
 	]
 }

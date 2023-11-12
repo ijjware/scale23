@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://djofc4nb5tu2f"
-path="res://.godot/imported/scalemountains.blend-03d262c44141461a3790b8f63e6b0d4b.scn"
+path="res://.godot/imported/scalemountains.blend-9c7e98115568e13d5570cc29f29c170c.scn"
 
 [deps]
 
-source_file="res://scalemountains.blend"
-dest_files=["res://.godot/imported/scalemountains.blend-03d262c44141461a3790b8f63e6b0d4b.scn"]
+source_file="res://Blends/scalemountains.blend"
+dest_files=["res://.godot/imported/scalemountains.blend-9c7e98115568e13d5570cc29f29c170c.scn"]
 
 [params]
 

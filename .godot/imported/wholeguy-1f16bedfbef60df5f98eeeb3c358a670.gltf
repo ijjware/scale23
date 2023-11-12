@@ -96,7 +96,7 @@
 		{
 			"mimeType":"image/png",
 			"name":"GuySprite.aseprite",
-			"uri":"../../textures/GuySprite.aseprite.png"
+			"uri":"../../Blends/textures/GuySprite.aseprite.png"
 		}
 	],
 	"accessors":[
@@ -170,7 +170,7 @@
 	"buffers":[
 		{
 			"byteLength":22276,
-			"uri":"wholeguy-79dc72726f0602bc4866aad872d88ba0.bin"
+			"uri":"wholeguy-1f16bedfbef60df5f98eeeb3c358a670.bin"
 		}
 	]
 }

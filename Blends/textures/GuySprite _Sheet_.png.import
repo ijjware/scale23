@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnp8fsuyqi5x4"
-path="res://.godot/imported/GuySprite.png-5174ad481f3e5f0734fdeebea22cb26f.ctex"
+uid="uid://dr82smegouegr"
+path="res://.godot/imported/GuySprite _Sheet_.png-ac3c121effbc05e7b4ffb5c11d8e2a73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/GuySprite.png"
-dest_files=["res://.godot/imported/GuySprite.png-5174ad481f3e5f0734fdeebea22cb26f.ctex"]
+source_file="res://Blends/textures/GuySprite _Sheet_.png"
+dest_files=["res://.godot/imported/GuySprite _Sheet_.png-ac3c121effbc05e7b4ffb5c11d8e2a73.ctex"]
 
 [params]
 
