@@ -23,3 +23,5 @@ shape = SubResource("BoxShape3D_3fb2p")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -13, 13, 0)
+
+[editable path="wholeguy"]
