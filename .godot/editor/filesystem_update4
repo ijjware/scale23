@@ -1,4 +1,3 @@
 res://node_3d.tscn
-res://PC.tscn
-res://PC.gd
-res://Camera.gd
+res://Character/PC.tscn
+res://Levels/node_3d.tscn

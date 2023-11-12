@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3uxus1cdydul"]
+
+[ext_resource type="Script" path="res://Scripts/PC.gd" id="1_l6nas"]
+[ext_resource type="PackedScene" uid="uid://bgxcp32sx6v0" path="res://Blends/wholeguy.blend" id="2_045tc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3fb2p"]
+size = Vector3(1.66917, 6.42676, 2.33207)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_l6nas")
+
+[node name="followDAD" type="Marker3D" parent="."]
+transform = Transform3D(-0.000951192, 0, 0.499999, 0, 0.5, 0, -0.499999, 0, -0.000951192, -3.65497, 5.79076, 0)
+
+[node name="Marker3D" type="Marker3D" parent="followDAD"]
+transform = Transform3D(-0.00190238, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0.999998, 0.00134519, -0.00134519, -1.16888, 2.34792, -18.1741)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38757, 0)
+shape = SubResource("BoxShape3D_3fb2p")
+
+[node name="wholeguy" parent="." instance=ExtResource("2_045tc")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -13, 13, 0)
