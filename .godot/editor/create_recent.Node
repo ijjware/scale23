@@ -1,8 +1,10 @@
+CharacterBody3D
+SpringArm3D
+CollisionShape3D
+StaticBody3D
 CPUParticles3D
 Decal
 MeshInstance3D
-CollisionShape3D
-CharacterBody3D
 PhysicalBone3D
 Skeleton3D
 Marker3D

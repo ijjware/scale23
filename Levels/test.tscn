@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://cl0i3dkuxukal"]
+
+[ext_resource type="PackedScene" uid="uid://b0m7a3les6l2r" path="res://Blends/scaletree.blend" id="1_sm2pu"]
+[ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
+[ext_resource type="PackedScene" uid="uid://c3uxus1cdydul" path="res://Character/PC.tscn" id="3_ntu4s"]
+[ext_resource type="PackedScene" uid="uid://cp38l1vj4lbvh" path="res://Blends/scalepig.blend" id="4_vxfh2"]
+[ext_resource type="PackedScene" uid="uid://bmcq783tyywlh" path="res://Blends/scalebush.blend" id="5_xnvfv"]
+[ext_resource type="PackedScene" uid="uid://kubwc4ucfblo" path="res://Blends/scalecrack.blend" id="6_tburj"]
+[ext_resource type="PackedScene" uid="uid://dujfcqh7cjae" path="res://Blends/scalespring.blend" id="7_dldqn"]
+[ext_resource type="PackedScene" uid="uid://ejkf2t0dslfr" path="res://Blends/scalescale.blend" id="8_aley8"]
+
+[node name="Node3D" type="Node3D"]
+metadata/_edit_lock_ = true
+
+[node name="scaletree" parent="." instance=ExtResource("1_sm2pu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26.381)
+
+[node name="scaletree2" parent="." instance=ExtResource("1_sm2pu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 735.282, 0, 0)
+
+[node name="scaletree3" parent="." instance=ExtResource("1_sm2pu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 735.282, 0, 1925.76)
+
+[node name="scaletree4" parent="." instance=ExtResource("1_sm2pu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256.718, 0, 1925.76)
+
+[node name="scaletree5" parent="." instance=ExtResource("1_sm2pu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256.718, 0, 974.773)
+
+[node name="scaletree6" parent="." instance=ExtResource("1_sm2pu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.818, 0, 974.773)
+
+[node name="scaletree7" parent="." instance=ExtResource("1_sm2pu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 424.07, 0, 974.773)
+
+[node name="scaletree8" parent="." instance=ExtResource("1_sm2pu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 660.541, 0, 974.773)
+
+[node name="scalemountains" parent="." instance=ExtResource("2_eyldp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -710, 0)
+metadata/_edit_lock_ = true
+
+[node name="scalepig" parent="." instance=ExtResource("4_vxfh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.9076, -0.646317, -16.4865)
+
+[node name="scalebush" parent="." instance=ExtResource("5_xnvfv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9777, -1.04022, 22.6964)
+
+[node name="scalecrack" parent="." instance=ExtResource("6_tburj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31793, 3.4815, -20.7745)
+
+[node name="scalecrack2" parent="." instance=ExtResource("6_tburj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31793, 3.4815, -20.7745)
+
+[node name="scalecrack3" parent="." instance=ExtResource("6_tburj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9811, 16.7283, -39.3648)
+
+[node name="scalespring" parent="." instance=ExtResource("7_dldqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6681, -3.86604, -35.4941)
+
+[node name="scalescale" parent="." instance=ExtResource("8_aley8")]
+transform = Transform3D(0.601996, 0, 0.798499, 0, 1, 0, -0.798499, 0, 0.601996, 17.9783, 16.0557, -82.6439)
+
+[node name="PC" parent="." instance=ExtResource("3_ntu4s")]

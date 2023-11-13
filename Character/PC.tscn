@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3uxus1cdydul"]
+[gd_scene load_steps=5 format=3 uid="uid://c3uxus1cdydul"]
 
 [ext_resource type="Script" path="res://Scripts/PC.gd" id="1_l6nas"]
 [ext_resource type="PackedScene" uid="uid://bgxcp32sx6v0" path="res://Blends/wholeguy.blend" id="2_045tc"]
@@ -6,7 +6,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_3fb2p"]
 size = Vector3(1.66917, 6.42676, 2.33207)
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_mk5ft"]
+auto_exposure_enabled = true
+
+[node name="PC" type="CharacterBody3D"]
 script = ExtResource("1_l6nas")
 
 [node name="followDAD" type="Marker3D" parent="."]
@@ -23,5 +26,6 @@ shape = SubResource("BoxShape3D_3fb2p")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -13, 13, 0)
+attributes = SubResource("CameraAttributesPractical_mk5ft")
 
 [editable path="wholeguy"]
