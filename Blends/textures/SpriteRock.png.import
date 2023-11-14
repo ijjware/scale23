@@ -2,26 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr82smegouegr"
-path="res://.godot/imported/GuySprite _Sheet_.png-ac3c121effbc05e7b4ffb5c11d8e2a73.ctex"
+uid="uid://dt8mno0f8pn3b"
+path.s3tc="res://.godot/imported/SpriteRock.png-69e74d14897aec2f80100615e1a916e3.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://Blends/textures/GuySprite _Sheet_.png"
-dest_files=["res://.godot/imported/GuySprite _Sheet_.png-ac3c121effbc05e7b4ffb5c11d8e2a73.ctex"]
+source_file="res://Blends/textures/SpriteRock.png"
+dest_files=["res://.godot/imported/SpriteRock.png-69e74d14897aec2f80100615e1a916e3.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

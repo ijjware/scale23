@@ -26,12 +26,12 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("ui_down", "ui_up", "ui_left", "ui_right", )
 	var direction = (transform.basis * Vector3(input_dir.x, input_dir.y, 0)).normalized()
-	print(input_dir)
+#	print(input_dir)
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 		transform = transform.rotated_local(Vector3(0,1,0), deg_to_rad(direction.y * -2))
-		rotate_y(deg_to_rad(input_dir.y * -2))
+#		rotate_y(deg_to_rad(input_dir.y * -2))
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
