@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0sfempynokp"]
+
+[ext_resource type="Script" path="res://Scripts/spring.gd" id="1_aaude"]
+[ext_resource type="PackedScene" uid="uid://b6n4qcdqwfpvc" path="res://Blends/scalespring.blend" id="1_r4uer"]
+[ext_resource type="PackedScene" uid="uid://4v55gybh2r13" path="res://Blends/PanelS.blend" id="3_s4y5s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xtxjo"]
+size = Vector3(6.45753, 5, 6.47758)
+
+[node name="Spring" type="Node3D"]
+script = ExtResource("1_aaude")
+
+[node name="scalespring" parent="." instance=ExtResource("1_r4uer")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="TriggerZone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.10815, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93207, -0.820766, 0.252305)
+shape = SubResource("BoxShape3D_xtxjo")
+
+[node name="PanelS" parent="." instance=ExtResource("3_s4y5s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.21993, 10.1958, -7.56862)
+visible = false
+
+[connection signal="body_entered" from="TriggerZone" to="." method="_on_trigger_zone_body_entered"]
+[connection signal="body_exited" from="TriggerZone" to="." method="_on_trigger_zone_body_exited"]

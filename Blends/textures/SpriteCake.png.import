@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j2jmqrkcpw0k"
-path.s3tc="res://.godot/imported/SpriteSpring.png-4721e8256020ab7c1abd3a795a3b76b4.s3tc.ctex"
+uid="uid://y75neexcrm88"
+path.s3tc="res://.godot/imported/SpriteCake.png-78646c9f1a968fe830b648b6e6ac61b8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Blends/textures/SpriteSpring.png"
-dest_files=["res://.godot/imported/SpriteSpring.png-4721e8256020ab7c1abd3a795a3b76b4.s3tc.ctex"]
+source_file="res://Blends/textures/SpriteCake.png"
+dest_files=["res://.godot/imported/SpriteCake.png-78646c9f1a968fe830b648b6e6ac61b8.s3tc.ctex"]
 
 [params]
 

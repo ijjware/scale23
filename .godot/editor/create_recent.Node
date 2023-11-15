@@ -1,11 +1,14 @@
-CollisionShape3D
-RigidBody3D
+Decal
 MeshInstance3D
+Panel
+PopupPanel
+CollisionShape3D
+Area3D
+RigidBody3D
 CharacterBody3D
 SpringArm3D
 StaticBody3D
 CPUParticles3D
-Decal
 PhysicalBone3D
 Skeleton3D
 Marker3D
