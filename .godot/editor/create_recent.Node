@@ -1,9 +1,13 @@
+RemoteTransform3D
+CollisionShape3D
+CollisionPolygon3D
+ImporterMeshInstance3D
+Area3D
+AnimationPlayer
 Decal
 MeshInstance3D
 Panel
 PopupPanel
-CollisionShape3D
-Area3D
 RigidBody3D
 CharacterBody3D
 SpringArm3D

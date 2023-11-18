@@ -19,7 +19,7 @@ func _on_trigger_zone_body_entered(body):
 	#display context button
 	if body.name == "PC":
 		$PanelS.visible = true
-#		print (body.name + "in")
+#		print (body.name + "in" +name)
 		springable = true
 
 func _on_trigger_zone_body_exited(body):
@@ -27,4 +27,4 @@ func _on_trigger_zone_body_exited(body):
 	if body.name == "PC":
 		$PanelS.visible = false
 		springable = false
-#		print (body.name + "out")
+#		print (body.name + "out" +name)

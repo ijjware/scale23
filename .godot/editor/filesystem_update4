@@ -1,7 +1,10 @@
-res://Levels/node_3d.tscn
-res://Levels/test.tscn
-res://Character/PC.tscn
-res://Stuff/spring.tscn
-res://Stuff/spring.gd
-res://Scripts/spring.gd
 res://Scripts/root.gd
+res://Levels/test.tscn
+res://Stuff/tree.tscn
+res://Stuff/rock.tscn
+res://Stuff/cactus.tscn
+res://Scripts/noms.gd
+res://Scripts/spring.gd
+res://Stuff/spring.tscn
+res://Character/PC.tscn
+res://Scripts/PC.gd

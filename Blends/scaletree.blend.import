@@ -33,7 +33,8 @@ _subresources={
 "PATH:scaletree": {
 "decomposition/precision": 3,
 "generate/physics": true,
-"physics/body_type": 1
+"physics/body_type": 1,
+"physics/shape_type": 1
 }
 }
 }
