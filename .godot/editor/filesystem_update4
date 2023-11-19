@@ -1,10 +1,8 @@
-res://Scripts/root.gd
-res://Levels/test.tscn
 res://Stuff/tree.tscn
+res://Scripts/PC.gd
+res://Levels/test.tscn
 res://Stuff/rock.tscn
 res://Stuff/cactus.tscn
-res://Scripts/noms.gd
-res://Scripts/spring.gd
-res://Stuff/spring.tscn
 res://Character/PC.tscn
-res://Scripts/PC.gd
+res://Scripts/noms.gd
+res://Scripts/root.gd

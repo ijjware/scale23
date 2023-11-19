@@ -9,6 +9,7 @@ func _ready():
 	noms = tree.get_nodes_in_group("noms")
 	for nom in noms:
 		nom.connect("nom", _on_nom)
+	noms.clear()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -26,13 +27,16 @@ func _on_spring_sproing():
 
 func _on_nom(nommed):
 	noms.push_front(nommed)
-#	print("nom"+nommed.name)
+	print("nom"+nommed.name)
 	await tree.create_timer(0.1).timeout
+	if noms.size() > 1: 
+		noms.pop_back()
+		return
 	var nom = noms.pop_front()
-	noms.clear()
 	swallow(nom)
 
 func swallow(nom):
 	if player.stomachSize > player.stomachs.size() :
 		player.stomachs.push_front(nom)
 		nom.swallowed()
+		noms.clear()

@@ -10,28 +10,17 @@ size = Vector3(2.8826, 6.42676, 2.33207)
 auto_exposure_enabled = true
 
 [node name="PC" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 script = ExtResource("1_l6nas")
-
-[node name="hider" type="RemoteTransform3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9305, 13.0564, 0.601726)
-
-[node name="hider2" type="RemoteTransform3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9305, 13.0564, 0.601726)
-
-[node name="hider3" type="RemoteTransform3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9305, 13.0564, 0.601726)
-
-[node name="hider4" type="RemoteTransform3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9305, 13.0564, 0.601726)
-
-[node name="hider5" type="RemoteTransform3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9305, 13.0564, 0.601726)
 
 [node name="behindCam" type="Marker3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.500001, 0, 0, 0, 0.500001, -17.9305, 13.0564, 0.601726)
 
-[node name="followDAD" type="Marker3D" parent="."]
-transform = Transform3D(-0.000951192, 0, 0.499999, 0, 0.5, 0, -0.499999, 0, -0.000951192, -3.65497, 5.79076, 0)
+[node name="frontPC" type="Marker3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.22554, 4.64237, 0)
+
+[node name="aim" type="Marker3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.0496, 5.57169, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38757, 0)

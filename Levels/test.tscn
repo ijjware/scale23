@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=12 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
-[ext_resource type="PackedScene" uid="uid://b0m7a3les6l2r" path="res://Blends/scaletree.blend" id="1_sm2pu"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
 [ext_resource type="PackedScene" uid="uid://c3uxus1cdydul" path="res://Character/PC.tscn" id="3_ntu4s"]
 [ext_resource type="PackedScene" uid="uid://cp38l1vj4lbvh" path="res://Blends/scalepig.blend" id="4_vxfh2"]
@@ -16,9 +15,6 @@
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ki48w")
 metadata/_edit_lock_ = true
-
-[node name="scaletree2" parent="." instance=ExtResource("1_sm2pu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 735.282, 0, 0)
 
 [node name="scalemountains" parent="." instance=ExtResource("2_eyldp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -710, 0)
@@ -37,7 +33,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9811, 16.7283, -39.3648)
 transform = Transform3D(0.601996, 0, 0.798499, 0, 1, 0, -0.798499, 0, 0.601996, 17.9783, 16.0867, -82.6439)
 
 [node name="PC" parent="." instance=ExtResource("3_ntu4s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6445, 3.8147e-06, -3.32229)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.1538, 0.75, 0)
 
 [node name="Spring" parent="." instance=ExtResource("9_46m13")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8022, -4.24878, 1.43155)
@@ -45,13 +41,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8022, -4.24878, 1.43155)
 [node name="cake" parent="." instance=ExtResource("11_inc58")]
 transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, 34.9257, 39.2894, -60.2894)
 
+[node name="cake2" parent="." instance=ExtResource("11_inc58")]
+transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, -22.5042, 0, 0)
+
 [node name="cactus" parent="." instance=ExtResource("11_kl0u0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8812, -4.24878, 18.7496)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.245696, 3.00481, 19.4584)
 
 [node name="tree" parent="." instance=ExtResource("12_yfbw4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4285, -4.24878, 31.5374)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3.7, 67.8722)
 
 [node name="rock" parent="." instance=ExtResource("13_ry4up")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.349822, -4.24878, 30.7016)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.349822, -4.24878, 30.7016)
 
 [connection signal="sproing" from="Spring" to="." method="_on_spring_sproing"]
