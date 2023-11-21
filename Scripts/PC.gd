@@ -39,12 +39,12 @@ func _physics_process(delta):
 	var direction = (transform.basis * Vector3(input_dir.x, input_dir.y, 0)).normalized()
 #	print(input_dir)
 	if direction:
-		velocity.x = direction.x * (SPEED - (stomachs.size()*speedReduction))
-		velocity.z = direction.z * (SPEED - (stomachs.size()*speedReduction))
+		velocity.x = direction.x * (SPEED - (stomachs.size() * speedReduction))
+		velocity.z = direction.z * (SPEED - (stomachs.size() * speedReduction))
 		transform = transform.rotated_local(Vector3(0,1,0), deg_to_rad(direction.y * -2))
 	else:
-		velocity.x = move_toward(velocity.x, 0, (SPEED - (stomachs.size()*speedReduction)))
-		velocity.z = move_toward(velocity.z, 0, (SPEED - (stomachs.size()*speedReduction)))
+		velocity.x = move_toward(velocity.x, 0, (SPEED - (stomachs.size() * speedReduction)))
+		velocity.z = move_toward(velocity.z, 0, (SPEED - (stomachs.size() * speedReduction)))
 		
 	
 	$wholeguy/AnimationTree.set("parameters/conditions/idle", input_dir == Vector2.ZERO)

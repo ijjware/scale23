@@ -1,6 +1,10 @@
+PhysicalBone3D
+Skeleton3D
+CharacterBody3D
+CollisionShape3D
+BoneAttachment3D
 AnimationTree
 RemoteTransform3D
-CollisionShape3D
 CollisionPolygon3D
 ImporterMeshInstance3D
 Area3D
@@ -10,12 +14,9 @@ MeshInstance3D
 Panel
 PopupPanel
 RigidBody3D
-CharacterBody3D
 SpringArm3D
 StaticBody3D
 CPUParticles3D
-PhysicalBone3D
-Skeleton3D
 Marker3D
 PinJoint3D
 SoftBody3D

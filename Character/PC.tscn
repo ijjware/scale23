@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://c3uxus1cdydul"]
+[gd_scene load_steps=16 format=3 uid="uid://c3uxus1cdydul"]
 
 [ext_resource type="Script" path="res://Scripts/PC.gd" id="1_l6nas"]
 [ext_resource type="PackedScene" uid="uid://bgxcp32sx6v0" path="res://Blends/wholeguy.blend" id="2_045tc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3fb2p"]
 size = Vector3(2.8826, 6.42676, 2.33207)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_diysb"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_h7bum"]
 animation = &"BallSwing"
@@ -70,15 +72,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38757, 0)
 shape = SubResource("BoxShape3D_3fb2p")
 
 [node name="wholeguy" parent="." instance=ExtResource("2_045tc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="Skeleton3D" parent="wholeguy/Armature_001" index="0"]
-bones/2/rotation = Quaternion(-6.51339e-08, 1.51802e-08, 0.823709, -0.567012)
-bones/2/scale = Vector3(0.976634, 0.976634, 0.976634)
-bones/3/rotation = Quaternion(-0.00152188, 0.00270178, -0.257145, 0.966368)
-bones/4/scale = Vector3(1.02393, 1.02393, 1.02393)
-bones/7/rotation = Quaternion(-1.16198e-08, -3.6847e-08, 0.833836, 0.552013)
-bones/7/scale = Vector3(0.976634, 0.976634, 0.976634)
-bones/8/rotation = Quaternion(1.35925e-08, -3.00962e-08, 0.27191, 0.962323)
+bones/2/rotation = Quaternion(-4.98071e-08, -1.14736e-09, 0.854403, -0.519612)
+bones/2/scale = Vector3(0.988835, 0.988835, 0.988835)
+bones/3/rotation = Quaternion(-0.000725594, 0.00128818, -0.200411, 0.979711)
+bones/4/scale = Vector3(1.01129, 1.01129, 1.01129)
+bones/7/rotation = Quaternion(-2.72936e-08, -4.72212e-08, 0.859825, 0.510589)
+bones/7/scale = Vector3(0.988834, 0.988835, 0.988835)
+bones/8/rotation = Quaternion(3.90417e-08, -4.98315e-08, 0.209442, 0.977821)
 bones/9/rotation = Quaternion(2.43434e-08, -1.61211e-08, 0.16461, 0.986359)
 bones/11/rotation = Quaternion(0.5, 0.5, 0.5, -0.5)
 bones/12/rotation = Quaternion(-0.707107, 3.62648e-08, 8.96499e-08, 0.707107)
@@ -99,6 +102,18 @@ bones/30/rotation = Quaternion(0.0223192, -3.49464e-10, 0.00108504, 0.99975)
 bones/32/rotation = Quaternion(0.0121174, -8.87056e-09, 0.000589083, 0.999926)
 bones/33/rotation = Quaternion(-0.0474019, 7.17709e-09, -0.00230443, 0.998873)
 
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="wholeguy/Armature_001/Skeleton3D" index="1"]
+transform = Transform3D(0.99882, -4.19095e-08, 0.0485572, 0.000337174, -0.999976, -0.00693624, 0.0485561, 0.00694434, -0.998797, 0.367774, -0.169494, -3.87039)
+bone_name = "head.015"
+bone_idx = 33
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="wholeguy/Armature_001/Skeleton3D/BoneAttachment3D"]
+transform = Transform3D(1, 0, -3.72529e-09, -2.91038e-11, 1, -4.65661e-10, 3.72529e-09, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/CharacterBody3D"]
+transform = Transform3D(2.115, 0, 0, 0, 2.115, 0, 0, 0, 2.115, -0.000288099, 0.854183, 0.00592494)
+shape = SubResource("SphereShape3D_diysb")
+
 [node name="AnimationTree" type="AnimationTree" parent="wholeguy"]
 tree_root = SubResource("AnimationNodeStateMachine_fjecm")
 anim_player = NodePath("../AnimationPlayer")
@@ -108,7 +123,7 @@ parameters/conditions/idle = false
 parameters/conditions/walk = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 4.37114e-08, -7.57103e-08, 0, 0.866025, 0.5, 8.74228e-08, 0.5, -0.866025, 0, 13, -13)
+transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -13, 13, 0)
 attributes = SubResource("CameraAttributesPractical_mk5ft")
 
 [editable path="wholeguy"]
