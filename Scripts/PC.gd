@@ -45,6 +45,11 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, (SPEED - (stomachs.size()*speedReduction)))
 		velocity.z = move_toward(velocity.z, 0, (SPEED - (stomachs.size()*speedReduction)))
+		
+	
+	$wholeguy/AnimationTree.set("parameters/conditions/idle", input_dir == Vector2.ZERO)
+	$wholeguy/AnimationTree.set("parameters/conditions/walk", input_dir != Vector2.ZERO)
+	$wholeguy/AnimationTree.set('parameters/conditions/ballswing', Input.is_action_pressed('ballspin'))
 	move_and_slide()
 
 func add_stomach():

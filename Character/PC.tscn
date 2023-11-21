@@ -1,10 +1,53 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3uxus1cdydul"]
+[gd_scene load_steps=15 format=3 uid="uid://c3uxus1cdydul"]
 
 [ext_resource type="Script" path="res://Scripts/PC.gd" id="1_l6nas"]
 [ext_resource type="PackedScene" uid="uid://bgxcp32sx6v0" path="res://Blends/wholeguy.blend" id="2_045tc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3fb2p"]
 size = Vector3(2.8826, 6.42676, 2.33207)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_h7bum"]
+animation = &"BallSwing"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1trig"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pskku"]
+animation = &"Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1huts"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bbphm"]
+advance_mode = 2
+advance_condition = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6374m"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sj124"]
+advance_mode = 2
+advance_condition = &"ballswing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bl5dv"]
+advance_mode = 2
+advance_condition = &"ballswing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ohluc"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_fjecm"]
+states/BallSwing/node = SubResource("AnimationNodeAnimation_h7bum")
+states/BallSwing/position = Vector2(575, -2)
+states/Idle/node = SubResource("AnimationNodeAnimation_1trig")
+states/Idle/position = Vector2(372, 95)
+states/Run/node = SubResource("AnimationNodeAnimation_pskku")
+states/Run/position = Vector2(372, 5)
+states/Start/position = Vector2(140, 86)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_1huts"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_bbphm"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_6374m"), "Run", "BallSwing", SubResource("AnimationNodeStateMachineTransition_sj124"), "Idle", "BallSwing", SubResource("AnimationNodeStateMachineTransition_bl5dv"), "BallSwing", "Idle", SubResource("AnimationNodeStateMachineTransition_ohluc")]
+graph_offset = Vector2(56, -83)
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_mk5ft"]
 auto_exposure_enabled = true
@@ -28,8 +71,44 @@ shape = SubResource("BoxShape3D_3fb2p")
 
 [node name="wholeguy" parent="." instance=ExtResource("2_045tc")]
 
+[node name="Skeleton3D" parent="wholeguy/Armature_001" index="0"]
+bones/2/rotation = Quaternion(-6.51339e-08, 1.51802e-08, 0.823709, -0.567012)
+bones/2/scale = Vector3(0.976634, 0.976634, 0.976634)
+bones/3/rotation = Quaternion(-0.00152188, 0.00270178, -0.257145, 0.966368)
+bones/4/scale = Vector3(1.02393, 1.02393, 1.02393)
+bones/7/rotation = Quaternion(-1.16198e-08, -3.6847e-08, 0.833836, 0.552013)
+bones/7/scale = Vector3(0.976634, 0.976634, 0.976634)
+bones/8/rotation = Quaternion(1.35925e-08, -3.00962e-08, 0.27191, 0.962323)
+bones/9/rotation = Quaternion(2.43434e-08, -1.61211e-08, 0.16461, 0.986359)
+bones/11/rotation = Quaternion(0.5, 0.5, 0.5, -0.5)
+bones/12/rotation = Quaternion(-0.707107, 3.62648e-08, 8.96499e-08, 0.707107)
+bones/14/rotation = Quaternion(-4.97594e-08, -3.37896e-10, -0.655202, 0.755454)
+bones/15/rotation = Quaternion(0.5, -0.5, -0.5, -0.5)
+bones/16/rotation = Quaternion(-0.707107, -3.62648e-08, -8.96499e-08, 0.707107)
+bones/18/rotation = Quaternion(-4.97594e-08, 3.37896e-10, 0.655202, 0.755454)
+bones/19/rotation = Quaternion(0.506134, 0.234573, 0.200808, 0.805283)
+bones/20/rotation = Quaternion(0.421973, -1.76048e-07, 0.272546, 0.864672)
+bones/21/rotation = Quaternion(-0.296064, -0.0130909, -0.077893, 0.951897)
+bones/22/rotation = Quaternion(-0.154748, 0.00141372, 0.0719711, 0.985328)
+bones/23/rotation = Quaternion(-0.433807, -9.25425e-09, -0.0210894, 0.900759)
+bones/25/rotation = Quaternion(-0.0575076, 3.25778e-09, -0.00279571, 0.998341)
+bones/26/rotation = Quaternion(-0.318871, 3.8446e-10, -0.0155018, 0.947671)
+bones/27/rotation = Quaternion(-0.0377036, -2.33813e-09, -0.00183294, 0.999287)
+bones/29/rotation = Quaternion(-0.0698462, 3.48826e-09, -0.00339554, 0.997552)
+bones/30/rotation = Quaternion(0.0223192, -3.49464e-10, 0.00108504, 0.99975)
+bones/32/rotation = Quaternion(0.0121174, -8.87056e-09, 0.000589083, 0.999926)
+bones/33/rotation = Quaternion(-0.0474019, 7.17709e-09, -0.00230443, 0.998873)
+
+[node name="AnimationTree" type="AnimationTree" parent="wholeguy"]
+tree_root = SubResource("AnimationNodeStateMachine_fjecm")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/conditions/ballswing = false
+parameters/conditions/idle = false
+parameters/conditions/walk = false
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -13, 13, 0)
+transform = Transform3D(-1, 4.37114e-08, -7.57103e-08, 0, 0.866025, 0.5, 8.74228e-08, 0.5, -0.866025, 0, 13, -13)
 attributes = SubResource("CameraAttributesPractical_mk5ft")
 
 [editable path="wholeguy"]
