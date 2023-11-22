@@ -1,6 +1,15 @@
+<<<<<<< Updated upstream
 PhysicalBone3D
 Skeleton3D
 CharacterBody3D
+=======
+Marker3D
+PathFollow3D
+Path3D
+Camera3D
+Node3D
+RemoteTransform3D
+>>>>>>> Stashed changes
 CollisionShape3D
 BoneAttachment3D
 AnimationTree
@@ -17,9 +26,13 @@ RigidBody3D
 SpringArm3D
 StaticBody3D
 CPUParticles3D
+<<<<<<< Updated upstream
 Marker3D
+=======
+PhysicalBone3D
+Skeleton3D
+>>>>>>> Stashed changes
 PinJoint3D
 SoftBody3D
 SliderJoint3D
 ConeTwistJoint3D
-Camera3D

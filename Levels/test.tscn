@@ -1,16 +1,19 @@
-[gd_scene load_steps=12 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=15 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
 [ext_resource type="PackedScene" uid="uid://c3uxus1cdydul" path="res://Character/PC.tscn" id="3_ntu4s"]
-[ext_resource type="PackedScene" uid="uid://cp38l1vj4lbvh" path="res://Blends/scalepig.blend" id="4_vxfh2"]
 [ext_resource type="PackedScene" uid="uid://kubwc4ucfblo" path="res://Blends/scalecrack.blend" id="6_tburj"]
 [ext_resource type="PackedScene" uid="uid://ejkf2t0dslfr" path="res://Blends/scalescale.blend" id="8_aley8"]
 [ext_resource type="PackedScene" uid="uid://c0sfempynokp" path="res://Stuff/spring.tscn" id="9_46m13"]
 [ext_resource type="PackedScene" uid="uid://dj2kgbvs3x3dr" path="res://Stuff/cake.tscn" id="11_inc58"]
 [ext_resource type="PackedScene" uid="uid://b14478g6j3hin" path="res://Stuff/cactus.tscn" id="11_kl0u0"]
+[ext_resource type="Script" path="res://Levels/Starting.gd" id="12_8vcsq"]
 [ext_resource type="PackedScene" uid="uid://cf0m34tkfawh" path="res://Stuff/tree.tscn" id="12_yfbw4"]
+[ext_resource type="Environment" uid="uid://drjvej2tt4vtg" path="res://Levels/sky.tres" id="13_5trou"]
 [ext_resource type="PackedScene" uid="uid://vr2gprn1wsbh" path="res://Stuff/rock.tscn" id="13_ry4up"]
+[ext_resource type="PackedScene" uid="uid://8f2ojv1jp77f" path="res://Blends/PanelStart.blend" id="14_0aer8"]
+[ext_resource type="PackedScene" uid="uid://crpi3rd1uc7m7" path="res://Stuff/pig.tscn" id="14_oo3nr"]
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ki48w")
@@ -19,9 +22,6 @@ metadata/_edit_lock_ = true
 [node name="scalemountains" parent="." instance=ExtResource("2_eyldp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -710, 0)
 metadata/_edit_lock_ = true
-
-[node name="scalepig" parent="." instance=ExtResource("4_vxfh2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.9076, -0.646317, -16.4865)
 
 [node name="scalecrack2" parent="." instance=ExtResource("6_tburj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31793, 3.4815, -20.7745)
@@ -52,5 +52,21 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3.7
 
 [node name="rock" parent="." instance=ExtResource("13_ry4up")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.349822, -4.24878, 30.7016)
+
+[node name="Starting" type="Node3D" parent="."]
+script = ExtResource("12_8vcsq")
+metadata/_edit_lock_ = true
+
+[node name="statCam" type="Camera3D" parent="Starting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -927.643, 341.792, 6.1097)
+environment = ExtResource("13_5trou")
+current = true
+far = 5600.0
+
+[node name="PanelStart" parent="Starting/statCam" instance=ExtResource("14_0aer8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1.10617, -2.20714)
+
+[node name="pig" parent="." instance=ExtResource("14_oo3nr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7676, -4.24878, -1.3523)
 
 [connection signal="sproing" from="Spring" to="." method="_on_spring_sproing"]

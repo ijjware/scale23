@@ -14,20 +14,20 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	for object in player.stomachs:
-		object.transform = player.hideout.global_transform 
-	pass
+		object.global_position = player.hideout.global_position
+		object.linear_velocity.y = 0
 
 #handles when a player activates a spring
 func _on_spring_sproing():
 #	do animation
 #	on animation finished:
 #	TODO: modify based on current weight
-	player.velocity.y = 200
+	player.velocity.y = 150
 	player.move_and_slide()
 
 func _on_nom(nommed):
 	noms.push_front(nommed)
-	print("nom"+nommed.name)
+#	print("nom"+nommed.name)
 	await tree.create_timer(0.1).timeout
 	if noms.size() > 1: 
 		noms.pop_back()
