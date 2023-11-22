@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 res://Character/PC.tscn
 res://Scripts/root.gd
 res://Scripts/PC.gd
@@ -5,3 +6,16 @@ res://Levels/test.tscn
 res://Stuff/tree.tscn
 res://Stuff/rock.tscn
 res://Stuff/cactus.tscn
+=======
+res://Stuff/pig.tscn
+res://Scripts/root.gd
+res://Scripts/spring.gd
+res://Levels/sky.tres
+res://Scripts/pig.gd
+res://Levels/test.tscn
+res://Stuff/tree.tscn
+res://Stuff/cactus.tscn
+res://Character/PC.tscn
+res://Scripts/noms.gd
+res://Stuff/rock.tscn
+>>>>>>> Stashed changes
