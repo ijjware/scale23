@@ -17,12 +17,12 @@ func _process(delta):
 func _on_area_3d_body_entered(body):
 	if body.name == "PC":
 		nommable = true
-		print (body.name + "in" + name)
+#		print (body.name + "in" + name)
 
 func _on_area_3d_body_exited(body):
 	if body.name == "PC":
 		nommable = false
-		print(body.name + "out" + name)
+#		print(body.name + "out" + name)
 
 func swallowed():
 	area.monitorable = false

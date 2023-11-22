@@ -1,6 +1,5 @@
 extends "res://Scripts/noms.gd"
 
-@onready var path = $".."
 var isSwallowed = false
 
 # Called when the node enters the scene tree for the first time.
@@ -14,10 +13,9 @@ func _process(delta):
 		#catch signal at scene root
 		emit_signal("nom", self)
 # increment pathfollow progress
-	if !isSwallowed: path.progress += .1
 
 func swallowed():
-	isSwallowed = true
+	isSwallowed = true # don't walk 
 	area.monitorable = false
 	area.monitorable = false
 	self.visible = false 
@@ -26,6 +24,5 @@ func spit_up():
 	area.monitorable = true
 	area.monitorable = true
 	await get_tree().create_timer(1).timeout
-#	$"../..".global_position
-#	isSwallowed = false
+	isSwallowed = false #right self, resume walk
 	self.visible = true

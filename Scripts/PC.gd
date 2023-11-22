@@ -36,19 +36,6 @@ func _physics_process(delta):
 	var direction = (transform.basis * Vector3(input_dir.x, input_dir.y, 0)).normalized()
 #	print(input_dir)
 	if direction:
-<<<<<<< Updated upstream
-		velocity.x = direction.x * (SPEED - (stomachs.size() * speedReduction))
-		velocity.z = direction.z * (SPEED - (stomachs.size() * speedReduction))
-		transform = transform.rotated_local(Vector3(0,1,0), deg_to_rad(direction.y * -2))
-	else:
-		velocity.x = move_toward(velocity.x, 0, (SPEED - (stomachs.size() * speedReduction)))
-		velocity.z = move_toward(velocity.z, 0, (SPEED - (stomachs.size() * speedReduction)))
-		
-	
-	$wholeguy/AnimationTree.set("parameters/conditions/idle", input_dir == Vector2.ZERO)
-	$wholeguy/AnimationTree.set("parameters/conditions/walk", input_dir != Vector2.ZERO)
-	$wholeguy/AnimationTree.set('parameters/conditions/ballswing', Input.is_action_pressed('ballspin'))
-=======
 		spd = move_toward(spd, SPEED, .5)
 		velocity.x = direction.x * (spd - (stomachs.size()*speedReduction))
 		velocity.z = direction.z * (spd - (stomachs.size()*speedReduction))
@@ -57,7 +44,11 @@ func _physics_process(delta):
 		spd = move_toward(spd, 2, .1)
 		velocity.x = move_toward(velocity.x, 0, (spd/10 + (stomachs.size()*speedReduction)))
 		velocity.z = move_toward(velocity.z, 0, (spd/10 + (stomachs.size()*speedReduction)))
->>>>>>> Stashed changes
+		
+		
+	$wholeguy/AnimationTree.set("parameters/conditions/idle", input_dir == Vector2.ZERO)
+	$wholeguy/AnimationTree.set("parameters/conditions/walk", input_dir != Vector2.ZERO)
+	$wholeguy/AnimationTree.set('parameters/conditions/ballswing', Input.is_action_pressed('ballspin'))
 	move_and_slide()
 
 func spit():
