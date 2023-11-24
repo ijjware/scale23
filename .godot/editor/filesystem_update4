@@ -1,12 +1,9 @@
-res://Stuff/pig.tscn
+res://Levels/test.tscn
 res://Scripts/root.gd
 res://Scripts/spring.gd
 res://Levels/sky.tres
-res://Scripts/pig.gd
-res://Levels/test.tscn
 res://Stuff/tree.tscn
 res://Stuff/cactus.tscn
-res://Character/PC.tscn
-res://Scripts/noms.gd
 res://Stuff/rock.tscn
-res://Scripts/PC.gd
+res://Stuff/pig.tscn
+res://Character/PC.tscn
