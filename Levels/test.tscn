@@ -33,7 +33,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9811, 16.7283, -39.3648)
 transform = Transform3D(0.601996, 0, 0.798499, 0, 1, 0, -0.798499, 0, 0.601996, 17.9783, 16.0867, -82.6439)
 
 [node name="PC" parent="." instance=ExtResource("3_ntu4s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.1538, 0.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.154, 2000, 0)
 
 [node name="Spring" parent="." instance=ExtResource("9_46m13")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8022, -4.24878, 1.43155)

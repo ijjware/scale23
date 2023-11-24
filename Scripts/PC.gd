@@ -44,11 +44,16 @@ func _physics_process(delta):
 		spd = move_toward(spd, 2, .1)
 		velocity.x = move_toward(velocity.x, 0, (spd/10 + (stomachs.size()*speedReduction)))
 		velocity.z = move_toward(velocity.z, 0, (spd/10 + (stomachs.size()*speedReduction)))
-		
+	
+	var current_animation = $wholeguy/AnimationTree.get('parameters/playback').get_current_node()
 		
 	$wholeguy/AnimationTree.set("parameters/conditions/idle", input_dir == Vector2.ZERO)
 	$wholeguy/AnimationTree.set("parameters/conditions/walk", input_dir != Vector2.ZERO)
 	$wholeguy/AnimationTree.set('parameters/conditions/ballswing', Input.is_action_pressed('ballspin'))
+	$wholeguy/AnimationTree.set('parameters/conditions/onFloor', is_on_floor())
+	print(current_animation)
+	if is_on_floor() == false and current_animation != "FallingLoop" and current_animation != "BallSwing":
+		$wholeguy/AnimationTree["parameters/playback"].travel("FallingStart")
 	move_and_slide()
 
 func spit():

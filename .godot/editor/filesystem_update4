@@ -7,3 +7,4 @@ res://Stuff/cactus.tscn
 res://Stuff/rock.tscn
 res://Stuff/pig.tscn
 res://Character/PC.tscn
+res://Scripts/PC.gd
