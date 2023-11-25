@@ -1,6 +1,6 @@
 [editor_metadata]
 
-executable_path="C:/Users/PC/Desktop/Godot_v4.1.3-stable_win64.exe"
+executable_path="C:/Users/Chris/Downloads/Godot_v4.1.3-stable_win64.exe/Godot_v4.1.3-stable_win64.exe"
 use_advanced_connections=false
 
 [debug_options]
@@ -36,9 +36,12 @@ Panel:scale=true
 ImporterMeshInstance3D:scale=true
 CollisionPolygon3D:scale=true
 RemoteTransform3D:scale=true
+<<<<<<< Updated upstream
 BoneAttachment3D:scale=true
+=======
 Path3D:scale=true
 PathFollow3D:scale=true
+>>>>>>> Stashed changes
 
 [dialog_bounds]
 
@@ -49,8 +52,13 @@ project_settings=Rect2(1920, 23, 1536, 801)
 
 [recent_files]
 
+<<<<<<< Updated upstream
 scripts=["Vector3", "Vector2", "Transform3D", "RigidBody3D", "RemoteTransform3D", "Object", "NodePath", "Node3D", "Node", "Camera3D"]
-scenes=["res://Character/PC.tscn", "res://Levels/test.tscn", "res://Stuff/cactus.tscn", "res://Stuff/rock.tscn", "res://Stuff/tree.tscn", "res://Stuff/spring.tscn", "res://tree.tscn", "res://Stuff/cake.tscn", "res://Levels/node_3d.tscn", "res://node_3d.tscn"]
+scenes=["res://Character/PC.tscn", "res://Stuff/cactus.tscn", "res://Stuff/rock.tscn", "res://Stuff/tree.tscn", "res://Levels/test.tscn", "res://Stuff/spring.tscn", "res://tree.tscn", "res://Stuff/cake.tscn", "res://Levels/node_3d.tscn", "res://node_3d.tscn"]
+=======
+scripts=["Curve3D", "Vector3", "Transform3D", "RigidBody3D", "PhysicsBody3D", "PathFollow3D", "Path3D", "Object", "NodePath", "Node3D"]
+scenes=["res://Stuff/rock.tscn", "res://Stuff/pig.tscn", "res://Character/PC.tscn", "res://Stuff/cactus.tscn", "res://Stuff/tree.tscn", "res://Levels/test.tscn", "res://Stuff/cake.tscn", "res://Stuff/spring.tscn", "res://tree.tscn", "res://Levels/node_3d.tscn"]
+>>>>>>> Stashed changes
 
 [script_setup]
 
