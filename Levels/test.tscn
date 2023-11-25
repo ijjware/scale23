@@ -41,6 +41,7 @@ transform = Transform3D(0.601996, 0, 0.798499, 0, 1, 0, -0.798499, 0, 0.601996, 
 
 [node name="PC" parent="." instance=ExtResource("3_ntu4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.4144, 4.2141, 0)
+metadata/_edit_lock_ = true
 
 [node name="Spring" parent="." instance=ExtResource("9_46m13")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8022, 0.191576, 1.43155)
@@ -52,7 +53,7 @@ transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, 
 transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, -16.5064, 2.98172, 0)
 
 [node name="cactus" parent="." instance=ExtResource("11_kl0u0")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.245696, 2.87116, 19.4584)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.245696, 8.75199, 52.2512)
 
 [node name="Starting" type="Node3D" parent="."]
 script = ExtResource("12_8vcsq")
