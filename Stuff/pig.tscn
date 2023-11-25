@@ -47,7 +47,7 @@ points = PackedVector3Array(0.999217, 0.498674, -2.0006, 0.499706, 0.500387, -1.
 radius = 5.30051
 
 [node name="pig" type="RigidBody3D" groups=["noms"]]
-transform = Transform3D(1.00001, 0, 0, 0, -4.37119e-08, -1.00001, 0, 1.00001, -4.37118e-08, 0, 0, 0)
+transform = Transform3D(1.00001, 0, 0, 0, -4.37119e-08, -1.00001, 0, 1.00001, -4.37118e-08, 0, 0.494983, 0)
 script = ExtResource("1_tc3u8")
 
 [node name="scalepig_002" type="MeshInstance3D" parent="."]

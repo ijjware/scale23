@@ -27,7 +27,18 @@
                 }
             },
             "mesh" : 0,
-            "name" : "scalebush"
+            "name" : "scalebush",
+            "rotation" : [
+                0.7071068286895752,
+                0,
+                0,
+                0.7071068286895752
+            ],
+            "translation" : [
+                0,
+                1.5,
+                0
+            ]
         }
     ],
     "materials" : [

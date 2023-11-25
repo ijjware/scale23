@@ -6,7 +6,6 @@ Marker3D
 PathFollow3D
 Path3D
 Camera3D
-Node3D
 RemoteTransform3D
 CollisionShape3D
 BoneAttachment3D
@@ -21,7 +20,6 @@ MeshInstance3D
 Panel
 PopupPanel
 SpringArm3D
-StaticBody3D
 CPUParticles3D
 Marker3D
 PhysicalBone3D

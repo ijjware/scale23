@@ -29,7 +29,7 @@ func _on_nom(nommed):
 	noms.push_front(nommed)
 #	print("nom"+nommed.name)
 	await tree.create_timer(0.1).timeout
-	if noms.size() > 1: 
+	if noms.size() > 1:
 		noms.pop_back()
 		return
 	var nom = noms.pop_front()
