@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
 [ext_resource type="PackedScene" uid="uid://c3uxus1cdydul" path="res://Character/PC.tscn" id="3_ntu4s"]
-[ext_resource type="PackedScene" uid="uid://kubwc4ucfblo" path="res://Blends/scalecrack.blend" id="6_tburj"]
 [ext_resource type="PackedScene" uid="uid://ejkf2t0dslfr" path="res://Blends/scalescale.blend" id="8_aley8"]
 [ext_resource type="PackedScene" uid="uid://c0sfempynokp" path="res://Stuff/spring.tscn" id="9_46m13"]
 [ext_resource type="PackedScene" uid="uid://dj2kgbvs3x3dr" path="res://Stuff/cake.tscn" id="11_inc58"]
@@ -14,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://vr2gprn1wsbh" path="res://Stuff/rock.tscn" id="13_ry4up"]
 [ext_resource type="PackedScene" uid="uid://8f2ojv1jp77f" path="res://Blends/PanelStart.blend" id="14_0aer8"]
 [ext_resource type="PackedScene" uid="uid://crpi3rd1uc7m7" path="res://Stuff/pig.tscn" id="14_oo3nr"]
+[ext_resource type="PackedScene" uid="uid://dxrvy5j8wgvd1" path="res://Stuff/cracked.tscn" id="14_vm2bh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bppq5"]
 size = Vector3(5464.84, 230.712, 8192)
@@ -29,12 +29,6 @@ metadata/_edit_lock_ = true
 [node name="scalemountains" parent="." instance=ExtResource("2_eyldp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78572, 0)
 metadata/_edit_lock_ = true
-
-[node name="scalecrack2" parent="." instance=ExtResource("6_tburj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31793, 3.4815, -20.7745)
-
-[node name="scalecrack3" parent="." instance=ExtResource("6_tburj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9811, 16.7283, -39.3648)
 
 [node name="scalescale" parent="." instance=ExtResource("8_aley8")]
 transform = Transform3D(0.601996, 0, 0.798499, 0, 1, 0, -0.798499, 0, 0.601996, 17.9783, 20.1574, -82.6439)
@@ -375,5 +369,11 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.8518, 427.015, 3561.31)
 shape = SubResource("CylinderShape3D_xjq02")
 metadata/_edit_lock_ = true
+
+[node name="cracked" parent="." instance=ExtResource("14_vm2bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.2346, -12.644)
+
+[node name="cracked2" parent="." instance=ExtResource("14_vm2bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2313, 22.6055, -32.7786)
 
 [connection signal="sproing" from="Spring" to="." method="_on_spring_sproing"]

@@ -52,7 +52,7 @@ func _physics_process(delta):
 	$wholeguy/AnimationTree.set('parameters/conditions/ballswing', Input.is_action_pressed('ballspin'))
 	$wholeguy/AnimationTree.set('parameters/conditions/onFloor', is_on_floor())
 	$wholeguy/Armature_001/Skeleton3D.set_bone_pose_scale(33, Vector3(25, 25, 25))
-	print($wholeguy/Armature_001/Skeleton3D.get_bone_pose_scale(33))
+
 	if is_on_floor() == false and current_animation != "FallingLoop" and current_animation != "BallSwing":
 		$wholeguy/AnimationTree["parameters/playback"].travel("FallingStart")
 	move_and_slide()

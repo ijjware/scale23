@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxrvy5j8wgvd1"]
+
+[ext_resource type="PackedScene" uid="uid://kubwc4ucfblo" path="res://Blends/scalecrack.blend" id="1_1v2v6"]
+[ext_resource type="Script" path="res://Scripts/cracked.gd" id="2_ywrhy"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_abu86"]
+points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
+
+[node name="cracked" type="Node3D"]
+
+[node name="scalecrack" parent="." instance=ExtResource("1_1v2v6")]
+
+[node name="Area3D" type="Area3D" parent="scalecrack/Cube/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("2_ywrhy")
+
+[node name="above_collision" type="CollisionShape3D" parent="scalecrack/Cube/StaticBody3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05438, 0)
+shape = SubResource("ConvexPolygonShape3D_abu86")
+
+[node name="disappear_timer" type="Timer" parent="scalecrack/Cube/StaticBody3D/Area3D"]
+wait_time = 2.5
+one_shot = true
+
+[node name="reappear_timer" type="Timer" parent="scalecrack/Cube/StaticBody3D/Area3D"]
+one_shot = true
+
+[connection signal="body_entered" from="scalecrack/Cube/StaticBody3D/Area3D" to="scalecrack/Cube/StaticBody3D/Area3D" method="_on_body_entered"]
+[connection signal="timeout" from="scalecrack/Cube/StaticBody3D/Area3D/disappear_timer" to="scalecrack/Cube/StaticBody3D/Area3D" method="_on_disappear_timer_timeout"]
+[connection signal="timeout" from="scalecrack/Cube/StaticBody3D/Area3D/reappear_timer" to="scalecrack/Cube/StaticBody3D/Area3D" method="_on_reappear_timer_timeout"]
+
+[editable path="scalecrack"]

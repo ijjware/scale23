@@ -1,162 +1,183 @@
 {
-    "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.7.33",
-        "version" : "2.0"
-    },
-    "scene" : 0,
-    "scenes" : [
-        {
-            "extras" : {
-                "sb_state" : {
-                    "action_preview" : null,
-                    "action_preview_enabled" : 0,
-                    "_identifier" : "a6d6bc26"
-                }
-            },
-            "name" : "Scene",
-            "nodes" : [
-                0
-            ]
-        }
-    ],
-    "nodes" : [
-        {
-            "extras" : {
-                "sb_props" : {
-                    "animation" : {}
-                }
-            },
-            "mesh" : 0,
-            "name" : "scalescale",
-            "rotation" : [
-                0.7071068286895752,
-                0,
-                0,
-                0.7071067094802856
-            ]
-        }
-    ],
-    "materials" : [
-        {
-            "doubleSided" : true,
-            "name" : "scalescale_mtl",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 0
-                },
-                "metallicFactor" : 0
-            }
-        }
-    ],
-    "meshes" : [
-        {
-            "name" : "scalescale",
-            "primitives" : [
-                {
-                    "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1,
-                        "TANGENT" : 2,
-                        "TEXCOORD_0" : 3
-                    },
-                    "indices" : 4,
-                    "material" : 0
-                }
-            ]
-        }
-    ],
-    "textures" : [
-        {
-            "sampler" : 0,
-            "source" : 0
-        }
-    ],
-    "images" : [
-        {
-            "mimeType" : "image/png",
-            "name" : "SpriteScale",
-            "uri" : "../../Blends/textures/SpriteScale.png"
-        }
-    ],
-    "accessors" : [
-        {
-            "bufferView" : 0,
-            "componentType" : 5126,
-            "count" : 164,
-            "max" : [
-                0.75,
-                2,
-                1
-            ],
-            "min" : [
-                -1,
-                -2.25,
-                -2.75
-            ],
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 1,
-            "componentType" : 5126,
-            "count" : 164,
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 2,
-            "componentType" : 5126,
-            "count" : 164,
-            "type" : "VEC4"
-        },
-        {
-            "bufferView" : 3,
-            "componentType" : 5126,
-            "count" : 164,
-            "type" : "VEC2"
-        },
-        {
-            "bufferView" : 4,
-            "componentType" : 5123,
-            "count" : 252,
-            "type" : "SCALAR"
-        }
-    ],
-    "bufferViews" : [
-        {
-            "buffer" : 0,
-            "byteLength" : 1968,
-            "byteOffset" : 0
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 1968,
-            "byteOffset" : 1968
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 2624,
-            "byteOffset" : 3936
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 1312,
-            "byteOffset" : 6560
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 504,
-            "byteOffset" : 7872
-        }
-    ],
-    "samplers" : [
-        {
-            "magFilter" : 9729,
-            "minFilter" : 9987
-        }
-    ],
-    "buffers" : [
-        {
-            "byteLength" : 8376,
-            "uri" : "scalescale-2adfc69394810cf5f017b71e5cc06564.bin"
-        }
-    ]
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v3.6.28",
+		"version":"2.0"
+	},
+	"extensionsUsed":[
+		"KHR_materials_specular",
+		"KHR_materials_ior"
+	],
+	"scene":0,
+	"scenes":[
+		{
+			"extras":{
+				"sb_state":{
+					"action_preview":null,
+					"action_preview_enabled":0,
+					"_identifier":"a6d6bc26"
+				}
+			},
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"extras":{
+				"sb_props":{
+					"animation":{}
+				}
+			},
+			"mesh":0,
+			"name":"scalescale",
+			"rotation":[
+				0.70710688829422,
+				0,
+				0,
+				0.7071066498756409
+			]
+		}
+	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularColorFactor":[
+						0,
+						0,
+						0
+					]
+				},
+				"KHR_materials_ior":{
+					"ior":1.4500000476837158
+				}
+			},
+			"name":"scalescale_mtl",
+			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":0
+				},
+				"metallicFactor":0
+			}
+		}
+	],
+	"meshes":[
+		{
+			"name":"scalescale",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":0,
+						"NORMAL":1,
+						"TEXCOORD_0":2,
+						"TANGENT":3
+					},
+					"indices":4,
+					"material":0
+				}
+			]
+		}
+	],
+	"textures":[
+		{
+			"sampler":0,
+			"source":0
+		}
+	],
+	"images":[
+		{
+			"mimeType":"image/png",
+			"name":"SpriteScale",
+			"uri":"../../Blends/textures/SpriteScale.png"
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"componentType":5126,
+			"count":164,
+			"max":[
+				0.75,
+				2,
+				1
+			],
+			"min":[
+				-1,
+				-2.25,
+				-2.75
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":1,
+			"componentType":5126,
+			"count":164,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":2,
+			"componentType":5126,
+			"count":164,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":3,
+			"componentType":5126,
+			"count":164,
+			"type":"VEC4"
+		},
+		{
+			"bufferView":4,
+			"componentType":5123,
+			"count":252,
+			"type":"SCALAR"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":1968,
+			"byteOffset":0,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":1968,
+			"byteOffset":1968,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":1312,
+			"byteOffset":3936,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2624,
+			"byteOffset":5248,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":504,
+			"byteOffset":7872,
+			"target":34963
+		}
+	],
+	"samplers":[
+		{
+			"magFilter":9729,
+			"minFilter":9987
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":8376,
+			"uri":"scalescale-2adfc69394810cf5f017b71e5cc06564.bin"
+		}
+	]
 }
