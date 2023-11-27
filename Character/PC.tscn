@@ -2320,12 +2320,15 @@ bone_name = "head.015"
 bone_idx = 33
 
 [node name="RigidBody3D" type="RigidBody3D" parent="wholeguy/Armature_001/Skeleton3D/BoneAttachment3D"]
-transform = Transform3D(1, 7.16192e-11, -1.11759e-08, -7.16192e-11, 1, 8.85087e-11, 1.11759e-08, -8.85088e-11, 1, 0, 0, 0)
+transform = Transform3D(1, 7.16192e-11, -1.11759e-08, -7.16192e-11, 1, 8.85088e-11, 1.11759e-08, -8.85088e-11, 1, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_b8b5t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/RigidBody3D"]
-transform = Transform3D(2.115, -1.33177e-10, 1.49012e-08, 1.05707e-10, 2.115, -1.63293e-10, -7.45058e-09, -4.04114e-10, 2.115, -0.000288084, 0.854183, 0.00592494)
+transform = Transform3D(7, 6.80353e-11, 1.08091e-07, -6.80353e-11, 7, 2.91444e-09, -1.08091e-07, -2.91444e-09, 7, -0.0570891, 0.817367, -0.0790966)
 shape = SubResource("SphereShape3D_diysb")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/RigidBody3D/CollisionShape3D"]
+transform = Transform3D(0.865285, 1.11037e-10, 2.23517e-08, -1.18714e-10, 0.865285, -6.88411e-10, 1.49012e-08, 2.43616e-09, 0.865284, 0.0325567, 0.0207442, 0.0330828)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wholeguy"]
 libraries = {
@@ -2337,7 +2340,7 @@ tree_root = SubResource("AnimationNodeStateMachine_fjecm")
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/conditions/ballswing = false
-parameters/conditions/idle = true
+parameters/conditions/idle = false
 parameters/conditions/onFloor = false
 parameters/conditions/walk = false
 
