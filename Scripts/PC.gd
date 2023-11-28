@@ -57,7 +57,6 @@ func _physics_process(delta):
 		$wholeguy/AnimationTree["parameters/playback"].travel("FallingStart")
 	move_and_slide()
 
-
 func spit():
 	var thing = stomachs.pop_front()
 	thing.global_position = front.global_position
@@ -65,7 +64,7 @@ func spit():
 	var eh = self.velocity
 	if eh.y < 0: eh.y = 1
 #	print(eh)
-	thing.spit_up()         
+	thing.spit_up()
 	thing.apply_central_impulse(Vector3(1,5,1)*eh *SPIT_SPEED)
 
 func add_stomach():

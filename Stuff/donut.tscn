@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj2kgbvs3x3dr"]
+[gd_scene load_steps=6 format=3 uid="uid://cx4g1mxuwmxjj"]
 
-[ext_resource type="Script" path="res://Scripts/cake.gd" id="1_e3sh2"]
-[ext_resource type="PackedScene" uid="uid://dwwpeiuxekj13" path="res://Blends/ScaleCake.blend" id="1_ohiat"]
+[ext_resource type="Script" path="res://Scripts/donut.gd" id="1_akle3"]
+[ext_resource type="PackedScene" uid="uid://cm36gf8kaha1y" path="res://Blends/scaleDonut.blend" id="1_wn487"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_iudv5"]
-size = Vector3(1.65669, 1.32159, 2.08875)
+[sub_resource type="BoxShape3D" id="BoxShape3D_dguo2"]
+size = Vector3(2.22138, 0.877526, 2.52874)
 
 [sub_resource type="Animation" id="Animation_7f76c"]
 resource_name = "rotate"
@@ -28,17 +28,18 @@ _data = {
 "rotate": SubResource("Animation_7f76c")
 }
 
-[node name="cake" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-script = ExtResource("1_e3sh2")
+[node name="big donut" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.494259, 0)
+script = ExtResource("1_akle3")
 
-[node name="ScaleCake" parent="." instance=ExtResource("1_ohiat")]
+[node name="scaleDonut" parent="." instance=ExtResource("1_wn487")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12402, 0)
-shape = SubResource("BoxShape3D_iudv5")
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.520966, 0)
+shape = SubResource("BoxShape3D_dguo2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

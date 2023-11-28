@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://c3uxus1cdydul"]
+[gd_scene load_steps=36 format=3 uid="uid://c3uxus1cdydul"]
 
 [ext_resource type="Script" path="res://Scripts/PC.gd" id="1_l6nas"]
 [ext_resource type="Texture2D" uid="uid://dw5fy8tyxl7qn" path="res://Blends/textures/GuySprite.aseprite.png" id="2_eqi5x"]
@@ -139,7 +139,12 @@ bounce = 0.5
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_diysb"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jlykw"]
+albedo_color = Color(0.427451, 0.270588, 0.270588, 1)
+metallic_specular = 0.0
+
 [sub_resource type="SphereMesh" id="SphereMesh_ux8qv"]
+material = SubResource("StandardMaterial3D_jlykw")
 
 [sub_resource type="Animation" id="Animation_ow7un"]
 resource_name = "BallSwing"

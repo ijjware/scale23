@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=18 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://8f2ojv1jp77f" path="res://Blends/PanelStart.blend" id="14_0aer8"]
 [ext_resource type="PackedScene" uid="uid://crpi3rd1uc7m7" path="res://Stuff/pig.tscn" id="14_oo3nr"]
 [ext_resource type="PackedScene" uid="uid://dxrvy5j8wgvd1" path="res://Stuff/cracked.tscn" id="14_vm2bh"]
+[ext_resource type="PackedScene" uid="uid://cx4g1mxuwmxjj" path="res://Stuff/donut.tscn" id="15_hhhdf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bppq5"]
 size = Vector3(5464.84, 230.712, 8192)
@@ -375,5 +376,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.2346, -12.644)
 
 [node name="cracked2" parent="." instance=ExtResource("14_vm2bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2313, 22.6055, -32.7786)
+
+[node name="big donut" parent="." instance=ExtResource("15_hhhdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.6583, 8.0598, -178.129)
 
 [connection signal="sproing" from="Spring" to="." method="_on_spring_sproing"]
