@@ -1,6 +1,10 @@
+res://Stuff/cracked.gd
 res://Stuff/cracked.tscn
 res://Scripts/PC.gd
 res://Scripts/root.gd
 res://Scripts/spring.gd
 res://Character/PC.tscn
 res://Scripts/cracked.gd
+res://Levels/sky.tres
+res://Levels/test.tscn
+res://Stuff/spring.tscn
