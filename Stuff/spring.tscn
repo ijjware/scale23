@@ -17,11 +17,11 @@ transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.10815, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93207, -0.820766, 0.252305)
+transform = Transform3D(1.26824, 0, 0, 0, 1, 0, 0, 0, 1.26191, -0.0481977, 7.18544, -0.398973)
 shape = SubResource("BoxShape3D_xtxjo")
 
 [node name="PanelS" parent="." instance=ExtResource("3_s4y5s")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.21993, 10.1958, -7.56862)
+transform = Transform3D(-1.62894e-07, 0, -0.994686, 0, 2.6428, 0, 3.72659, 0, -4.34791e-08, 8.14886, 10.1958, -3.11253)
 visible = false
 
 [connection signal="body_entered" from="TriggerZone" to="." method="_on_trigger_zone_body_entered"]
