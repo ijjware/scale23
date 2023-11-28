@@ -15,7 +15,6 @@ func _on_body_entered(body):
 		can_see = false
 		$disappear_timer.start(1)
 
-
 func _on_disappear_timer_timeout():
 	get_owner().visible = false
 	$"../../../Cube/StaticBody3D/CollisionShape3D".disabled = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c3uxus1cdydul"]
+[gd_scene load_steps=35 format=3 uid="uid://c3uxus1cdydul"]
 
 [ext_resource type="Script" path="res://Scripts/PC.gd" id="1_l6nas"]
 [ext_resource type="Texture2D" uid="uid://dw5fy8tyxl7qn" path="res://Blends/textures/GuySprite.aseprite.png" id="2_eqi5x"]
@@ -135,9 +135,11 @@ bind/33/bone = -1
 bind/33/pose = Transform3D(0.99882, 0.000337192, 0.0485561, -2.99187e-08, -0.999976, 0.00694426, 0.0485573, -0.00693603, -0.998796, -0.179807, 1.20506, -3.87541)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b8b5t"]
-bounce = 1.0
+bounce = 0.5
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_diysb"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ux8qv"]
 
 [sub_resource type="Animation" id="Animation_ow7un"]
 resource_name = "BallSwing"
@@ -2324,11 +2326,12 @@ transform = Transform3D(1, 7.16192e-11, -1.11759e-08, -7.16192e-11, 1, 8.85088e-
 physics_material_override = SubResource("PhysicsMaterial_b8b5t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/RigidBody3D"]
-transform = Transform3D(7, 6.80353e-11, 1.08091e-07, -6.80353e-11, 7, 2.91444e-09, -1.08091e-07, -2.91444e-09, 7, -0.0570891, 0.817367, -0.0790966)
+transform = Transform3D(3, 2.9158e-11, 4.63247e-08, -2.9158e-11, 3, 1.24905e-09, -4.63247e-08, -1.24905e-09, 3, -0.0570891, 0.817367, -0.0790966)
 shape = SubResource("SphereShape3D_diysb")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/RigidBody3D/CollisionShape3D"]
+[node name="CSGSphere3D" type="MeshInstance3D" parent="wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/RigidBody3D/CollisionShape3D"]
 transform = Transform3D(0.865285, 1.11037e-10, 2.23517e-08, -1.18714e-10, 0.865285, -6.88411e-10, 1.49012e-08, 2.43616e-09, 0.865284, 0.0325567, 0.0207442, 0.0330828)
+mesh = SubResource("SphereMesh_ux8qv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wholeguy"]
 libraries = {
@@ -2345,7 +2348,7 @@ parameters/conditions/onFloor = false
 parameters/conditions/walk = false
 
 [node name="behindCam" type="Marker3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.500001, 0, 0, 0, 0.500001, -12.0926, 6.53599, 0.601726)
+transform = Transform3D(0.5, 0, 0, 0, 0.500001, 0, 0, 0, 0.500001, -12.0926, 6.53599, 0.0202755)
 
 [node name="frontPC" type="Marker3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.22554, 4.64237, 0)
