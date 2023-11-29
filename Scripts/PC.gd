@@ -9,6 +9,8 @@ var stomachSize = 1
 var speedReduction = 1.5
 var jumpReduction = 8
 var spd = 2
+@export var ball_grow_factor = 1
+@onready var ball = $wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/RigidBody3D/CollisionShape3D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -51,7 +53,6 @@ func _physics_process(delta):
 	$wholeguy/AnimationTree.set("parameters/conditions/walk", input_dir != Vector2.ZERO)
 	$wholeguy/AnimationTree.set('parameters/conditions/ballswing', Input.is_action_pressed('ballspin'))
 	$wholeguy/AnimationTree.set('parameters/conditions/onFloor', is_on_floor())
-	$wholeguy/Armature_001/Skeleton3D.set_bone_pose_scale(33, Vector3(25, 25, 25))
 
 	if is_on_floor() == false and current_animation != "FallingLoop" and current_animation != "BallSwing":
 		$wholeguy/AnimationTree["parameters/playback"].travel("FallingStart")
@@ -70,3 +71,7 @@ func spit():
 func add_stomach():
 	stomachSize +=1
 	print("stummy")
+	ball.scale.x += ball_grow_factor
+	ball.scale.y += ball_grow_factor
+	ball.scale.z += ball_grow_factor
+	#ball.scale(Vector3(4, 4, 4))
