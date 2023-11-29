@@ -67,6 +67,9 @@ func spit():
 #	print(eh)
 	thing.spit_up()
 	thing.apply_central_impulse(Vector3(1,5,1)*eh *SPIT_SPEED)
+	ball.scale.x -= ball_grow_factor
+	ball.scale.y -= ball_grow_factor
+	ball.scale.z -= ball_grow_factor
 
 func add_stomach():
 	stomachSize +=1
