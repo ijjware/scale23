@@ -17,7 +17,7 @@ transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.10815, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone"]
-transform = Transform3D(1.26824, 0, 0, 0, 1, 0, 0, 0, 1.26191, -0.0481977, 7.18544, -0.398973)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.257454, 6.99935, -0.398973)
 shape = SubResource("BoxShape3D_xtxjo")
 
 [node name="PanelS" parent="." instance=ExtResource("3_s4y5s")]

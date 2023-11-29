@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://8f2ojv1jp77f" path="res://Blends/PanelStart.blend" id="14_0aer8"]
 [ext_resource type="PackedScene" uid="uid://crpi3rd1uc7m7" path="res://Stuff/pig.tscn" id="14_oo3nr"]
 [ext_resource type="PackedScene" uid="uid://dxrvy5j8wgvd1" path="res://Stuff/cracked.tscn" id="14_vm2bh"]
-[ext_resource type="PackedScene" uid="uid://cx4g1mxuwmxjj" path="res://Stuff/donut.tscn" id="15_hhhdf"]
+[ext_resource type="PackedScene" path="res://Stuff/donut.tscn" id="15_hhhdf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bppq5"]
 size = Vector3(5464.84, 230.712, 8192)
@@ -25,7 +25,6 @@ radius = 583.401
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ki48w")
-metadata/_edit_lock_ = true
 
 [node name="scalemountains" parent="." instance=ExtResource("2_eyldp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78572, 0)
@@ -379,5 +378,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2313, 22.6055, -32.7786)
 
 [node name="big donut" parent="." instance=ExtResource("15_hhhdf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.6583, 8.0598, -178.129)
-
-[connection signal="sproing" from="Spring" to="." method="_on_spring_sproing"]

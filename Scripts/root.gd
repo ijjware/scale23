@@ -17,14 +17,6 @@ func _process(delta):
 		object.global_position = player.hideout.global_position
 		object.linear_velocity.y = 0
 
-#handles when a player activates a spring
-func _on_spring_sproing():
-#	do animation
-#	on animation finished:
-#	TODO: modify based on current weight
-	player.velocity.y = 150
-	player.move_and_slide()
-
 func _on_nom(nommed):
 	noms.push_front(nommed)
 #	print("nom"+nommed.name)
