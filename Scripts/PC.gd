@@ -89,7 +89,6 @@ func add_stomach(thing):
 	if thing is RigidBody3D:
 		thing.freeze = true
 	thing.get_node("CollisionShape3D").disabled = true
-	thing.freeze = true
 	ball.scale.x += ball_grow_factor
 	ball.scale.y += ball_grow_factor
 	ball.scale.z += ball_grow_factor

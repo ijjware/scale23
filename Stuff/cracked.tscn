@@ -10,7 +10,8 @@ points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("2_ywrhy")
 disappear_time = 0.5
-weight_factor = 5.0
+reappear_time = 4.0
+weight_factor = 10.0
 
 [node name="scalecrack" parent="." instance=ExtResource("1_1v2v6")]
 
