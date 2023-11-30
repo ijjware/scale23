@@ -10,7 +10,7 @@ var speedReduction = 1.5
 var jumpReduction = 8
 var spd = 2
 @export var ball_grow_factor = 1
-@onready var ball = $wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/RigidBody3D/CollisionShape3D
+@onready var ball = $wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/CharacterBody3D/CollisionShape3D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
