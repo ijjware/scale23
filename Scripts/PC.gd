@@ -68,8 +68,7 @@ func spit():
 	var eh = front.global_position.direction_to($aim.global_position)
 	if eh.y < 0: 
 		eh.y = 1
-	thing.apply_central_impulse(Vector3(1, 1, 1) * SPIT_SPEED)
-	thing.position
+	print(eh)
 	thing.visible = true
 	thing.get_node("CollisionShape3D").disabled = false
 	ball.scale.x -= ball_grow_factor

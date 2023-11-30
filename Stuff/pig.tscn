@@ -45,23 +45,15 @@ points = PackedVector3Array(0.999217, 0.498674, -2.0006, 0.499706, 0.500387, -1.
 [sub_resource type="SphereShape3D" id="SphereShape3D_b8g4t"]
 radius = 5.30051
 
-[node name="pig" type="RigidBody3D" groups=["noms"]]
-transform = Transform3D(1.00001, 0, 0, 0, -4.37119e-08, -1.00001, 0, 1.00001, -4.37118e-08, 0, 0.494983, 0)
 
 [node name="scalepig_002" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, -7.10543e-15, 0, 7.10543e-15, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_sbyok")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, -7.10543e-15, 0, 7.10543e-15, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_co36p")
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, 0, 2.10931, 2.24746e-07)
 shape = SubResource("SphereShape3D_b8g4t")
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
