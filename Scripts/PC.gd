@@ -3,7 +3,6 @@ extends CharacterBody3D
 #signal spit(thing)
 const SPEED = 65
 const JUMP_VELOCITY = 50
-const SPIT_SPEED = 100
 var airJumps = 1
 var stomachSize = 4
 var speedReduction = 1.5
