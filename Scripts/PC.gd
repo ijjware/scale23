@@ -3,6 +3,8 @@ extends CharacterBody3D
 #signal spit(thing)
 const SPEED = 65
 const JUMP_VELOCITY = 50
+const SPIT_SPEED = 120
+const SPIT_CHAR = 250
 var airJumps = 1
 var stomachSize = 4
 var speedReduction = 1.5
@@ -64,10 +66,18 @@ func _physics_process(delta):
 func spit():
 	var thing = stomachs.pop_front()
 	thing.global_position = front.global_position
+	print(front.global_position)
 	var eh = front.global_position.direction_to($aim.global_position)
 	if eh.y < 0: 
 		eh.y = 1
 	print(eh)
+	if thing is CharacterBody3D:
+		thing.velocity = eh
+		thing.velocity.x *= SPIT_CHAR
+		thing.velocity.z *= SPIT_CHAR
+	if thing is RigidBody3D:
+		thing.freeze = false
+		thing.apply_impulse(eh * SPIT_SPEED)
 	thing.visible = true
 	thing.get_node("CollisionShape3D").disabled = false
 	ball.scale.x -= ball_grow_factor
@@ -77,6 +87,8 @@ func spit():
 func add_stomach(thing):
 	stomachs.append(thing)
 	thing.visible = false
+	if thing is RigidBody3D:
+		thing.freeze = true
 	thing.get_node("CollisionShape3D").disabled = true
 	ball.scale.x += ball_grow_factor
 	ball.scale.y += ball_grow_factor
