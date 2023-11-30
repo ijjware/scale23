@@ -1,7 +1,44 @@
 [gd_scene load_steps=8 format=3 uid="uid://b14478g6j3hin"]
 
 [ext_resource type="Texture2D" uid="uid://brt4shxaa4h3a" path="res://Blends/textures/SpriteBush.png" id="1_65yt7"]
-[ext_resource type="Script" path="res://Scripts/noms.gd" id="1_ccy56"]
+
+[sub_resource type="GDScript" id="GDScript_o5uxd"]
+script/source = "extends Node
+
+signal nom(node)
+var nommable = false
+@onready var area = $Area3D
+
+func _ready():
+	self.mass = 1
+	area.connect(\"body_exited\", _on_area_3d_body_exited)
+	area.connect(\"body_entered\", _on_area_3d_body_entered)
+
+func _process(delta):
+	if Input.is_action_just_pressed(\"eat\") and nommable:
+		#catch signal at scene root
+		emit_signal(\"nom\", self)
+
+func _on_area_3d_body_entered(body):
+	if body.name == \"PC\":
+		nommable = true
+#		print (body.name + \"in\" + name)
+
+func _on_area_3d_body_exited(body):
+	if body.name == \"PC\":
+		nommable = false
+#		print(body.name + \"out\" + name)
+
+func swallowed():
+	area.monitorable = false
+	area.monitorable = false
+	self.visible = false 
+
+func spit_up():
+	area.monitorable = true
+	area.monitorable = true
+	self.visible = true
+"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04yfi"]
 resource_name = "scalebush_mtl"
@@ -49,7 +86,7 @@ radius = 10.3551
 [node name="cactus" type="RigidBody3D" groups=["noms"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 5.95896, 0)
 lock_rotation = true
-script = ExtResource("1_ccy56")
+script = SubResource("GDScript_o5uxd")
 
 [node name="scalebush" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_mx3d5")

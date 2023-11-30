@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
+[ext_resource type="PackedScene" uid="uid://dkb8m3ulumvmx" path="res://Stuff/libra.tscn" id="2_nde3j"]
 [ext_resource type="Texture2D" uid="uid://hjdmip2hq4nk" path="res://Blends/textures/Sprite.png" id="3_bnrhu"]
 [ext_resource type="PackedScene" uid="uid://c3uxus1cdydul" path="res://Character/PC.tscn" id="3_ntu4s"]
 [ext_resource type="Texture2D" uid="uid://brt4shxaa4h3a" path="res://Blends/textures/SpriteBush.png" id="4_14oiy"]
@@ -91,8 +92,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_op3sy")
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_jaa35"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_fmfgg"]
 size = Vector3(1765.79, 6083.54, 3734.87)
 
@@ -106,6 +105,9 @@ size = Vector3(983.622, 6083.54, 5990.18)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ki48w")
+
+[node name="libra" parent="." instance=ExtResource("2_nde3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 270.015, 0, -1581.89)
 
 [node name="scalemountains" parent="." instance=ExtResource("2_eyldp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78572, 0)
@@ -9432,12 +9434,8 @@ transform = Transform3D(-0.183025, 0, 0.983108, 0, 1, 0, -0.983108, 0, -0.183025
 [node name="invisible walls" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="invisible walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.524979, -0.423066, -25.1134)
-navigation_mesh = SubResource("NavigationMesh_jaa35")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="invisible walls/NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2130.04, 0.423066, 1085.46)
+[node name="StaticBody3D" type="StaticBody3D" parent="invisible walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2129.52, 0, 1060.35)
 axis_lock_linear_x = true
 axis_lock_linear_y = true
 axis_lock_linear_z = true
@@ -9445,46 +9443,46 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 
-[node name="wall" type="CollisionShape3D" parent="invisible walls/NavigationRegion3D/StaticBody3D"]
+[node name="wall" type="CollisionShape3D" parent="invisible walls/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 781.862, 3005.72, 1837.1)
 shape = SubResource("BoxShape3D_fmfgg")
 metadata/_edit_lock_ = true
 
-[node name="wall3" type="CollisionShape3D" parent="invisible walls/NavigationRegion3D/StaticBody3D"]
+[node name="wall3" type="CollisionShape3D" parent="invisible walls/StaticBody3D"]
 transform = Transform3D(0.982765, 0, 0.184861, 0, 1, 0, -0.184861, 0, 0.982765, 570.308, 2974.31, -911.186)
 shape = SubResource("BoxShape3D_kpffq")
 metadata/_edit_lock_ = true
 
-[node name="wall4" type="CollisionShape3D" parent="invisible walls/NavigationRegion3D/StaticBody3D"]
+[node name="wall4" type="CollisionShape3D" parent="invisible walls/StaticBody3D"]
 transform = Transform3D(0.982613, 0, -0.185667, 0, 1, 0, 0.185667, 0, 0.982613, 3596.52, 2974.31, -911.186)
 shape = SubResource("BoxShape3D_kpffq")
 metadata/_edit_lock_ = true
 
-[node name="wall5" type="CollisionShape3D" parent="invisible walls/NavigationRegion3D/StaticBody3D"]
+[node name="wall5" type="CollisionShape3D" parent="invisible walls/StaticBody3D"]
 transform = Transform3D(0.999327, 0, -0.0366786, 0, 1, 0, 0.0366786, 0, 0.999327, 3715.71, 2974.31, -2919.55)
 shape = SubResource("BoxShape3D_kpffq")
 metadata/_edit_lock_ = true
 
-[node name="wall6" type="CollisionShape3D" parent="invisible walls/NavigationRegion3D/StaticBody3D"]
+[node name="wall6" type="CollisionShape3D" parent="invisible walls/StaticBody3D"]
 transform = Transform3D(0.999327, 0, -0.0366786, 0, 1, 0, 0.0366786, 0, 0.999327, 493.566, 2974.31, -2919.55)
 shape = SubResource("BoxShape3D_kpffq")
 metadata/_edit_lock_ = true
 
-[node name="wall7" type="CollisionShape3D" parent="invisible walls/NavigationRegion3D/StaticBody3D"]
+[node name="wall7" type="CollisionShape3D" parent="invisible walls/StaticBody3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1771.32, 2974.31, -3574.36)
 shape = SubResource("BoxShape3D_8vvpa")
 metadata/_edit_lock_ = true
 
-[node name="wall8" type="CollisionShape3D" parent="invisible walls/NavigationRegion3D/StaticBody3D"]
+[node name="wall8" type="CollisionShape3D" parent="invisible walls/StaticBody3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1771.32, 2974.31, 1626.49)
 shape = SubResource("BoxShape3D_8vvpa")
 metadata/_edit_lock_ = true
 
-[node name="wall2" type="CollisionShape3D" parent="invisible walls/NavigationRegion3D/StaticBody3D"]
+[node name="wall2" type="CollisionShape3D" parent="invisible walls/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3371.51, 2914.38, 1837.1)
 shape = SubResource("BoxShape3D_fmfgg")
 
-[node name="floor" type="CollisionShape3D" parent="invisible walls/NavigationRegion3D/StaticBody3D"]
+[node name="floor" type="CollisionShape3D" parent="invisible walls/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.56237, 0)
 shape = SubResource("WorldBoundaryShape3D_hc0hr")
 metadata/_edit_lock_ = true

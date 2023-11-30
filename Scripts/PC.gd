@@ -3,11 +3,11 @@ extends CharacterBody3D
 #signal spit(thing)
 const SPEED = 65
 const JUMP_VELOCITY = 50
-const SPIT_SPEED = 100
+const SPIT_SPEED = 1
 var airJumps = 1
 var stomachSize = 4
 var speedReduction = 1.5
-var jumpReduction = 8
+var jumpReduction = 5
 var spd = 2
 var can_eat = []
 @export var ball_grow_factor = 1
@@ -68,7 +68,8 @@ func spit():
 	var eh = front.global_position.direction_to($aim.global_position)
 	if eh.y < 0: 
 		eh.y = 1
-	thing.apply_central_impulse(Vector3(1, 1, 1) * SPIT_SPEED)
+	thing.freeze = false
+	thing.apply_central_impulse(Vector3(1, 5, 1) * SPIT_SPEED)
 	thing.position
 	thing.visible = true
 	thing.get_node("CollisionShape3D").disabled = false
@@ -80,6 +81,7 @@ func add_stomach(thing):
 	stomachs.append(thing)
 	thing.visible = false
 	thing.get_node("CollisionShape3D").disabled = true
+	thing.freeze = true
 	ball.scale.x += ball_grow_factor
 	ball.scale.y += ball_grow_factor
 	ball.scale.z += ball_grow_factor
