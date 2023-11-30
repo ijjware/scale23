@@ -8,7 +8,7 @@ const SPIT_CHAR = 250
 var airJumps = 1
 var stomachSize = 4
 var speedReduction = 1.5
-var jumpReduction = 8
+var jumpReduction = 5
 var spd = 2
 var can_eat = []
 @export var ball_grow_factor = 1
@@ -70,7 +70,6 @@ func spit():
 	var eh = front.global_position.direction_to($aim.global_position)
 	if eh.y < 0: 
 		eh.y = 1
-	print(eh)
 	if thing is CharacterBody3D:
 		thing.velocity = eh
 		thing.velocity.x *= SPIT_CHAR
@@ -90,6 +89,7 @@ func add_stomach(thing):
 	if thing is RigidBody3D:
 		thing.freeze = true
 	thing.get_node("CollisionShape3D").disabled = true
+	thing.freeze = true
 	ball.scale.x += ball_grow_factor
 	ball.scale.y += ball_grow_factor
 	ball.scale.z += ball_grow_factor

@@ -10,3 +10,6 @@ res://Character/PC.tscn
 res://Scripts/cake.gd
 res://Stuff/tree.tscn
 res://Stuff/rock.tscn
+res://Stuff/libra.tscn
+res://Stuff/cactus.tscn
+res://Scripts/libra.gd

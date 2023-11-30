@@ -31,8 +31,7 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:scalescale": {
-"decomposition/precision": 10,
-"generate/physics": true
+"decomposition/precision": 10
 }
 }
 }

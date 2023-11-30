@@ -3,11 +3,13 @@
 [ext_resource type="Script" path="res://Scripts/libra.gd" id="1_ewe6b"]
 [ext_resource type="PackedScene" uid="uid://ejkf2t0dslfr" path="res://Blends/scalescale.blend" id="1_rmj1f"]
 [ext_resource type="PackedScene" uid="uid://dxrvy5j8wgvd1" path="res://Stuff/cracked.tscn" id="3_4s2xs"]
-[ext_resource type="Script" path="res://Scripts/blueisland.gd" id="4_03cj7"]
 [ext_resource type="PackedScene" uid="uid://bf2jqltopbr66" path="res://Blends/scaleisland.blend" id="4_pwfb0"]
 [ext_resource type="Script" path="res://Scripts/cake.gd" id="5_wroex"]
 [ext_resource type="PackedScene" uid="uid://dwwpeiuxekj13" path="res://Blends/ScaleCake.blend" id="6_8bgr0"]
 [ext_resource type="PackedScene" uid="uid://vr2gprn1wsbh" path="res://Stuff/rock.tscn" id="7_iu4gq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l0u3o"]
+size = Vector3(25.0068, 1, 24.6264)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iudv5"]
 size = Vector3(1.65669, 1.32159, 2.08875)
@@ -58,16 +60,27 @@ script = ExtResource("1_ewe6b")
 
 [node name="scalescale" parent="." instance=ExtResource("1_rmj1f")]
 transform = Transform3D(1.80599, 0, 2.3955, 0, 3, 0, -2.3955, 0, 1.80599, 145.502, 58.8257, -187.498)
+metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
+[node name="StaticBody3D" type="StaticBody3D" parent="scalescale"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scalescale/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68198, 14.6647, 27.4516)
+shape = SubResource("BoxShape3D_l0u3o")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="scalescale/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52665, 14.6647, -32.3372)
+shape = SubResource("BoxShape3D_l0u3o")
+
 [node name="scaleisland" parent="." instance=ExtResource("4_pwfb0")]
-transform = Transform3D(1.71214, 0, 1.03372, 0, 2, 0, -1.03372, 0, 1.71214, -73.0138, 161.997, -74.9192)
-script = ExtResource("4_03cj7")
+transform = Transform3D(1.71214, 0, 1.03372, 0, 2, 0, -1.03372, 0, 1.71214, -66.969, 159.453, 2.3653)
 
 [node name="cake" type="Node3D" parent="scaleisland"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.180822, 15.5399, -0.20726)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.180822, 18.331, -0.20726)
 visible = false
 script = ExtResource("5_wroex")
+metadata/_edit_group_ = true
 
 [node name="ScaleCake" parent="scaleisland/cake" instance=ExtResource("6_8bgr0")]
 transform = Transform3D(0.99952, 0, -0.0309948, 0, 1, 0, 0.0309948, 0, 0.99952, 0, 0, 0)
@@ -77,7 +90,7 @@ monitoring = false
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="scaleisland/cake/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12402, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.124023, 0)
 shape = SubResource("BoxShape3D_iudv5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scaleisland/cake"]
@@ -98,44 +111,98 @@ mesh = SubResource("CylinderMesh_jlnd3")
 [node name="platforms" type="Node3D" parent="."]
 
 [node name="cracked" parent="platforms" instance=ExtResource("3_4s2xs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 132.262, 72.7331, -61.7939)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 147.294, 55.1989, 63.4303)
 
 [node name="cracked4" parent="platforms" instance=ExtResource("3_4s2xs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 105.758, 60.9582, -33.5689)
+transform = Transform3D(2, 0, 0, 0, 1.99984, 0.0249576, 0, -0.0249576, 1.99984, 108.567, 46.3828, 79.2034)
 
 [node name="cracked5" parent="platforms" instance=ExtResource("3_4s2xs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 107.338, 48.1552, -79.3621)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 95.7084, 40.1802, 37.576)
 
 [node name="cracked8" parent="platforms" instance=ExtResource("3_4s2xs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 71.6391, 28.411, -79.8484)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.707, 30.3213, 26.5792)
 
 [node name="cracked6" parent="platforms" instance=ExtResource("3_4s2xs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 62.1261, 16.064, -51.5861)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 50.4965, 20.5625, 53.252)
+
+[node name="cracked9" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 25.4184, 9.86072, 37.9671)
 
 [node name="cracked2" parent="platforms" instance=ExtResource("3_4s2xs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 167.808, 88.1405, -71.3835)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 135.781, 64.7048, 13.96)
+
+[node name="cracked10" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 121.185, 74.7537, -20.1298)
+reappear_time = 4.0
+
+[node name="cracked11" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 127.488, 84.3438, -49.8667)
+reappear_time = 4.0
+
+[node name="cracked12" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 168.332, 92.0877, -43.181)
+reappear_time = 4.0
+
+[node name="cracked13" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 165.288, 95.7132, -83.0268)
+reappear_time = 4.0
+
+[node name="cracked14" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 248.316, 95.7132, -200.317)
+reappear_time = 4.0
+
+[node name="cracked16" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 214.662, 66.6481, -280.667)
+reappear_time = 4.0
+
+[node name="cracked17" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 180.568, 73.8319, -331.508)
+reappear_time = 4.0
+
+[node name="cracked18" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 105.228, 95, -279.587)
+reappear_time = 4.0
+
+[node name="cracked19" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 127.947, 82.853, -340.202)
+reappear_time = 4.0
+
+[node name="cracked20" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 100.964, 87.0271, -311.02)
+reappear_time = 4.0
 
 [node name="cracked3" parent="platforms" instance=ExtResource("3_4s2xs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -20.9847, 162.807, -167.967)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -55.789, 160.504, -93.8742)
+
+[node name="cracked24" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -52.4301, 170.441, -63.6247)
 
 [node name="cracked7" parent="platforms" instance=ExtResource("3_4s2xs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.6457, 122.865, -181.353)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 32.6173, 109.703, -175.724)
+
+[node name="cracked15" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.17484, 120.684, -172.998)
+
+[node name="cracked21" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.6743, 130.324, -140.818)
+
+[node name="cracked22" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -38.8034, 140.864, -135.399)
+
+[node name="cracked23" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -34.3482, 151.235, -111.524)
 
 [node name="rockmark1" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 20.4676, 0.356417, -7.66847)
-metadata/_edit_lock_ = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.83804, 0.356402, 97.1696)
 
 [node name="rockmark2" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.69917, 0.356416, -20.5746)
-metadata/_edit_lock_ = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4.93039, 0.356401, 84.2635)
 
 [node name="rockmark3" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 25.6796, 0.356416, -28.8028)
-metadata/_edit_lock_ = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.05, 0.356401, 76.0353)
 
 [node name="rock1" parent="." instance=ExtResource("7_iu4gq")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 20.4676, 0.356417, -7.66847)
-metadata/_edit_lock_ = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.83804, 0.356402, 97.1696)
 metadata/_edit_group_ = true
 
 [node name="Decal" type="Decal" parent="rock1/rock" index="0"]
@@ -144,9 +211,8 @@ size = Vector3(13.0335, 13.8022, 8.34989)
 texture_albedo = SubResource("GradientTexture1D_ltg7i")
 
 [node name="rock2" parent="." instance=ExtResource("7_iu4gq")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.69917, 0.356416, -20.5746)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4.93039, 0.356401, 84.2635)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="Decal" type="Decal" parent="rock2/rock" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, -7.54979e-08, 0, 7.54979e-08, 1, 0, 0, -4.72251)
@@ -154,9 +220,8 @@ size = Vector3(13.0335, 13.8022, 8.34989)
 texture_albedo = SubResource("GradientTexture1D_ltg7i")
 
 [node name="rock3" parent="." instance=ExtResource("7_iu4gq")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 25.6796, 0.356416, -28.8028)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.05, 0.356401, 76.0353)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="Decal" type="Decal" parent="rock3/rock" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, -7.54979e-08, 0, 7.54979e-08, 1, 0, 0, -4.72251)
