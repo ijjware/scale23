@@ -6,3 +6,6 @@ res://Levels/sky.tres
 res://Character/PC.tscn
 res://Levels/test.tscn
 res://Stuff/spring.tscn
+res://Stuff/pig.tscn
+res://Scripts/pig.gd
+res://Scripts/cake.gd

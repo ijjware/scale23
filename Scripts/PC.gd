@@ -3,14 +3,16 @@ extends CharacterBody3D
 #signal spit(thing)
 const SPEED = 65
 const JUMP_VELOCITY = 50
-const SPIT_SPEED = 1
+const SPIT_SPEED = 25
 var airJumps = 1
-var stomachSize = 1
+var stomachSize = 4
 var speedReduction = 1.5
 var jumpReduction = 8
 var spd = 2
+var can_eat = []
 @export var ball_grow_factor = 1
 @onready var ball = $wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/CharacterBody3D/CollisionShape3D
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -27,10 +29,12 @@ func _physics_process(delta):
 #	$followDAD.transform = $followDAD.transform.rotated(Vector3(0,1,0), (.07*Input.get_last_mouse_velocity().normalized().x))
 	if Input.is_action_just_pressed("spit") and !stomachs.is_empty():
 		spit()
+	if Input.is_action_just_pressed("eat") and !can_eat.is_empty() and stomachs.size() < stomachSize:
+		add_stomach(can_eat.pop_front())
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or airJumps>0):
-		velocity.y = JUMP_VELOCITY - (stomachs.size()*jumpReduction)
-		if !is_on_floor(): airJumps -=1
+		velocity.y = JUMP_VELOCITY - (stomachs.size() * jumpReduction)
+		if !is_on_floor(): airJumps -= 1
 #		print(Input.get_last_mouse_velocity())
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -61,20 +65,37 @@ func _physics_process(delta):
 func spit():
 	var thing = stomachs.pop_front()
 	thing.global_position = front.global_position
-#	var eh = front.global_position.direction_to($aim.global_position)
-	var eh = self.velocity
-	if eh.y < 0: eh.y = 1
-#	print(eh)
-	thing.spit_up()
-	thing.apply_central_impulse(Vector3(1,5,1)*eh *SPIT_SPEED)
+	var eh = front.global_position.direction_to($aim.global_position)
+	if eh.y < 0: 
+		eh.y = 1
+	thing.apply_impulse(Vector3(1, 1, 1) * SPIT_SPEED, eh)
+	thing.position
+	thing.visible = true
+	thing.get_node("CollisionShape3D").disabled = false
 	ball.scale.x -= ball_grow_factor
 	ball.scale.y -= ball_grow_factor
 	ball.scale.z -= ball_grow_factor
 
-func add_stomach():
-	stomachSize +=1
-	print("stummy")
+func add_stomach(thing):
+	stomachs.append(thing)
+	thing.visible = false
+	thing.get_node("CollisionShape3D").disabled = true
 	ball.scale.x += ball_grow_factor
 	ball.scale.y += ball_grow_factor
 	ball.scale.z += ball_grow_factor
 	#ball.scale(Vector3(4, 4, 4))
+
+func eat_cake():
+	stomachSize += 1
+
+func victory():
+	$wholeguy/AnimationTree["parameters/playback"].travel("VictoryPose")
+
+
+func _on_interact_area_body_entered(body):
+	if body.is_in_group("noms"):
+		can_eat.append(body)
+
+func _on_interact_area_body_exited(body):
+	if body.is_in_group("noms"):
+		can_eat.erase(body)
