@@ -3,7 +3,7 @@ extends CharacterBody3D
 #signal spit(thing)
 const SPEED = 65
 const JUMP_VELOCITY = 50
-const SPIT_SPEED = 25
+const SPIT_SPEED = 100
 var airJumps = 1
 var stomachSize = 4
 var speedReduction = 1.5
@@ -68,7 +68,7 @@ func spit():
 	var eh = front.global_position.direction_to($aim.global_position)
 	if eh.y < 0: 
 		eh.y = 1
-	thing.apply_impulse(Vector3(1, 1, 1) * SPIT_SPEED, eh)
+	thing.apply_central_impulse(Vector3(1, 1, 1) * SPIT_SPEED)
 	thing.position
 	thing.visible = true
 	thing.get_node("CollisionShape3D").disabled = false

@@ -1,11 +1,12 @@
-res://Stuff/cracked.tscn
+res://Levels/test.tscn
 res://Scripts/PC.gd
 res://Scripts/root.gd
 res://Scripts/spring.gd
 res://Levels/sky.tres
-res://Character/PC.tscn
-res://Levels/test.tscn
+res://Stuff/cracked.tscn
 res://Stuff/spring.tscn
-res://Stuff/pig.tscn
-res://Scripts/pig.gd
+res://libra.tscn
+res://Character/PC.tscn
 res://Scripts/cake.gd
+res://Stuff/tree.tscn
+res://Stuff/rock.tscn

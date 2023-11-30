@@ -1,0 +1,172 @@
+[gd_scene load_steps=17 format=3 uid="uid://dkb8m3ulumvmx"]
+
+[ext_resource type="Script" path="res://Scripts/libra.gd" id="1_ewe6b"]
+[ext_resource type="PackedScene" uid="uid://ejkf2t0dslfr" path="res://Blends/scalescale.blend" id="1_rmj1f"]
+[ext_resource type="PackedScene" uid="uid://dxrvy5j8wgvd1" path="res://Stuff/cracked.tscn" id="3_4s2xs"]
+[ext_resource type="Script" path="res://Scripts/blueisland.gd" id="4_03cj7"]
+[ext_resource type="PackedScene" uid="uid://bf2jqltopbr66" path="res://Blends/scaleisland.blend" id="4_pwfb0"]
+[ext_resource type="Script" path="res://Scripts/cake.gd" id="5_wroex"]
+[ext_resource type="PackedScene" uid="uid://dwwpeiuxekj13" path="res://Blends/ScaleCake.blend" id="6_8bgr0"]
+[ext_resource type="PackedScene" uid="uid://vr2gprn1wsbh" path="res://Stuff/rock.tscn" id="7_iu4gq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iudv5"]
+size = Vector3(1.65669, 1.32159, 2.08875)
+
+[sub_resource type="Animation" id="Animation_7f76c"]
+resource_name = "rotate"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o4jw5"]
+_data = {
+"rotate": SubResource("Animation_7f76c")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nhopa"]
+size = Vector3(39.6237, 4.59565, 40.7039)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2ike"]
+albedo_color = Color(0.513726, 0.537255, 0.858824, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jlnd3"]
+material = SubResource("StandardMaterial3D_p2ike")
+top_radius = 4.5
+height = 0.286
+
+[sub_resource type="Gradient" id="Gradient_tu3ag"]
+offsets = PackedFloat32Array(0, 0.482877, 0.571918, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.596961, 0.377473, 0.931645, 1, 0.689551, 0.520486, 0.947348, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ltg7i"]
+gradient = SubResource("Gradient_tu3ag")
+width = 20
+
+[node name="libra" type="Node3D"]
+script = ExtResource("1_ewe6b")
+
+[node name="scalescale" parent="." instance=ExtResource("1_rmj1f")]
+transform = Transform3D(1.80599, 0, 2.3955, 0, 3, 0, -2.3955, 0, 1.80599, 145.502, 58.8257, -187.498)
+metadata/_edit_lock_ = true
+
+[node name="scaleisland" parent="." instance=ExtResource("4_pwfb0")]
+transform = Transform3D(1.71214, 0, 1.03372, 0, 2, 0, -1.03372, 0, 1.71214, -73.0138, 161.997, -74.9192)
+script = ExtResource("4_03cj7")
+
+[node name="cake" type="Node3D" parent="scaleisland"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.180822, 15.5399, -0.20726)
+visible = false
+script = ExtResource("5_wroex")
+
+[node name="ScaleCake" parent="scaleisland/cake" instance=ExtResource("6_8bgr0")]
+transform = Transform3D(0.99952, 0, -0.0309948, 0, 1, 0, 0.0309948, 0, 0.99952, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="scaleisland/cake"]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scaleisland/cake/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12402, 0)
+shape = SubResource("BoxShape3D_iudv5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scaleisland/cake"]
+libraries = {
+"": SubResource("AnimationLibrary_o4jw5")
+}
+
+[node name="Area3D" type="Area3D" parent="scaleisland"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scaleisland/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.7192, 0)
+shape = SubResource("BoxShape3D_nhopa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="scaleisland"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.95001, 0)
+mesh = SubResource("CylinderMesh_jlnd3")
+
+[node name="platforms" type="Node3D" parent="."]
+
+[node name="cracked" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 132.262, 72.7331, -61.7939)
+
+[node name="cracked4" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 105.758, 60.9582, -33.5689)
+
+[node name="cracked5" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 107.338, 48.1552, -79.3621)
+
+[node name="cracked8" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 71.6391, 28.411, -79.8484)
+
+[node name="cracked6" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 62.1261, 16.064, -51.5861)
+
+[node name="cracked2" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 167.808, 88.1405, -71.3835)
+
+[node name="cracked3" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -20.9847, 162.807, -167.967)
+
+[node name="cracked7" parent="platforms" instance=ExtResource("3_4s2xs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.6457, 122.865, -181.353)
+
+[node name="rockmark1" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 20.4676, 0.356417, -7.66847)
+metadata/_edit_lock_ = true
+
+[node name="rockmark2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.69917, 0.356416, -20.5746)
+metadata/_edit_lock_ = true
+
+[node name="rockmark3" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 25.6796, 0.356416, -28.8028)
+metadata/_edit_lock_ = true
+
+[node name="rock1" parent="." instance=ExtResource("7_iu4gq")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 20.4676, 0.356417, -7.66847)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Decal" type="Decal" parent="rock1/rock" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -7.54979e-08, 0, 7.54979e-08, 1, 0, 0, -4.72251)
+size = Vector3(13.0335, 13.8022, 8.34989)
+texture_albedo = SubResource("GradientTexture1D_ltg7i")
+
+[node name="rock2" parent="." instance=ExtResource("7_iu4gq")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.69917, 0.356416, -20.5746)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Decal" type="Decal" parent="rock2/rock" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -7.54979e-08, 0, 7.54979e-08, 1, 0, 0, -4.72251)
+size = Vector3(13.0335, 13.8022, 8.34989)
+texture_albedo = SubResource("GradientTexture1D_ltg7i")
+
+[node name="rock3" parent="." instance=ExtResource("7_iu4gq")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 25.6796, 0.356416, -28.8028)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Decal" type="Decal" parent="rock3/rock" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -7.54979e-08, 0, 7.54979e-08, 1, 0, 0, -4.72251)
+size = Vector3(13.0335, 13.8022, 8.34989)
+texture_albedo = SubResource("GradientTexture1D_ltg7i")
+
+[connection signal="body_entered" from="scaleisland/cake/Area3D" to="scaleisland/cake" method="_on_area_3d_body_entered" flags=18]
+[connection signal="body_entered" from="scaleisland/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="scaleisland/Area3D" to="." method="_on_area_3d_body_exited"]
+
+[editable path="rock1"]
+[editable path="rock2"]
+[editable path="rock3"]

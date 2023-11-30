@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://vr2gprn1wsbh"]
+[gd_scene load_steps=7 format=3 uid="uid://vr2gprn1wsbh"]
 
-[ext_resource type="Script" path="res://Scripts/noms.gd" id="1_jcnlt"]
 [ext_resource type="Texture2D" uid="uid://dt8mno0f8pn3b" path="res://Blends/textures/SpriteRock.png" id="1_wibie"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6hq60"]
@@ -51,7 +50,6 @@ radius = 8.0
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mass = 10.0
 center_of_mass_mode = 1
-script = ExtResource("1_jcnlt")
 
 [node name="rock" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ijjtb")

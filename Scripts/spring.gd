@@ -17,9 +17,10 @@ func _process(delta):
 			# I add by one so that I don't run into 0s
 			weight = current_body.get('stomachs').size() + 1
 		var weight_factor = weight * weight_multiplier
-		current_body.velocity.y = spring_amount - weight_factor
+		current_body.velocity.y = spring_amount + weight_factor
 		current_body.move_and_slide()
 		current_body = null
+
 #player stands in trigger zone
 func _on_trigger_zone_body_entered(body):
 	#display context button

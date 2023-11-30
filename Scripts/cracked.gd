@@ -2,7 +2,7 @@ extends Node3D
 var can_see = true
 @export var disappear_time = 1.0
 @export var reappear_time = 2.0
-@export var weight_factor = 1
+@export var weight_factor = 1.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

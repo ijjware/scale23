@@ -1,11 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=28 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
 [ext_resource type="Texture2D" uid="uid://hjdmip2hq4nk" path="res://Blends/textures/Sprite.png" id="3_bnrhu"]
 [ext_resource type="PackedScene" uid="uid://c3uxus1cdydul" path="res://Character/PC.tscn" id="3_ntu4s"]
 [ext_resource type="Texture2D" uid="uid://brt4shxaa4h3a" path="res://Blends/textures/SpriteBush.png" id="4_14oiy"]
-[ext_resource type="PackedScene" uid="uid://ejkf2t0dslfr" path="res://Blends/scalescale.blend" id="8_aley8"]
 [ext_resource type="PackedScene" uid="uid://c0sfempynokp" path="res://Stuff/spring.tscn" id="9_46m13"]
 [ext_resource type="PackedScene" uid="uid://dj2kgbvs3x3dr" path="res://Stuff/cake.tscn" id="11_inc58"]
 [ext_resource type="PackedScene" uid="uid://b14478g6j3hin" path="res://Stuff/cactus.tscn" id="11_kl0u0"]
@@ -8505,9 +8504,6 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -3, 0, 1, -1.31134e-07, 0, 14.
 mesh = SubResource("ArrayMesh_mx3d5")
 skeleton = NodePath("")
 
-[node name="scalescale" parent="." instance=ExtResource("8_aley8")]
-transform = Transform3D(0.601996, 0, 0.798499, 0, 1, 0, -0.798499, 0, 0.601996, 17.9783, 20.1574, -82.6439)
-
 [node name="PC" parent="." instance=ExtResource("3_ntu4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.414, 10.1525, 0)
 
@@ -8515,7 +8511,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.414, 10.1525, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8022, 0.191576, 1.43155)
 
 [node name="cake" parent="." instance=ExtResource("11_inc58")]
-transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, 34.9257, 39.2894, -60.2894)
+transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, -19.2803, 5.65994, 32.5271)
 
 [node name="cake2" parent="." instance=ExtResource("11_inc58")]
 transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, -16.5064, 2.98172, 0)
