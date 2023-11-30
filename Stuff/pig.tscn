@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://crpi3rd1uc7m7"]
+[gd_scene load_steps=8 format=3 uid="uid://crpi3rd1uc7m7"]
 
+[ext_resource type="Script" path="res://Scripts/pig.gd" id="1_tc3u8"]
 [ext_resource type="Texture2D" uid="uid://dq6cvx82ayroo" path="res://Blends/textures/SpritePig.png" id="1_u2s73"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jofyr"]
@@ -45,15 +46,21 @@ points = PackedVector3Array(0.999217, 0.498674, -2.0006, 0.499706, 0.500387, -1.
 [sub_resource type="SphereShape3D" id="SphereShape3D_b8g4t"]
 radius = 5.30051
 
+[node name="pig" type="CharacterBody3D" groups=["noms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0321403, 0.49124, 0.00707722)
+script = ExtResource("1_tc3u8")
 
 [node name="scalepig_002" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_sbyok")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_co36p")
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2.10931, 2.24914e-07)
 shape = SubResource("SphereShape3D_b8g4t")
