@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://8f2ojv1jp77f" path="res://Blends/PanelStart.blend" id="14_0aer8"]
 [ext_resource type="PackedScene" uid="uid://crpi3rd1uc7m7" path="res://Stuff/pig.tscn" id="14_oo3nr"]
 [ext_resource type="PackedScene" uid="uid://dxrvy5j8wgvd1" path="res://Stuff/cracked.tscn" id="14_vm2bh"]
-[ext_resource type="PackedScene" uid="uid://cx4g1mxuwmxjj" path="res://Stuff/donut.tscn" id="15_hhhdf"]
+[ext_resource type="PackedScene" path="res://Stuff/donut.tscn" id="15_hhhdf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfd18"]
 resource_name = "scaletree_mtl"
