@@ -31,7 +31,6 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:scalemountains": {
-"generate/physics": true,
 "physics/shape_type": 2
 }
 }
