@@ -39,11 +39,11 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_nhopa"]
 size = Vector3(39.6237, 4.59565, 40.7039)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2ike"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lrpb0"]
 albedo_color = Color(0.513726, 0.537255, 0.858824, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_jlnd3"]
-material = SubResource("StandardMaterial3D_p2ike")
+material = SubResource("StandardMaterial3D_lrpb0")
 top_radius = 4.5
 height = 0.286
 
@@ -133,43 +133,33 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 135.781, 64.7048, 13.96)
 
 [node name="cracked10" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 121.185, 74.7537, -20.1298)
-reappear_time = 4.0
 
 [node name="cracked11" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 127.488, 84.3438, -49.8667)
-reappear_time = 4.0
 
 [node name="cracked12" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 168.332, 92.0877, -43.181)
-reappear_time = 4.0
 
 [node name="cracked13" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 165.288, 95.7132, -83.0268)
-reappear_time = 4.0
 
 [node name="cracked14" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 248.316, 95.7132, -200.317)
-reappear_time = 4.0
 
 [node name="cracked16" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 214.662, 66.6481, -280.667)
-reappear_time = 4.0
 
 [node name="cracked17" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 180.568, 73.8319, -331.508)
-reappear_time = 4.0
 
 [node name="cracked18" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 105.228, 95, -279.587)
-reappear_time = 4.0
 
 [node name="cracked19" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 127.947, 82.853, -340.202)
-reappear_time = 4.0
 
 [node name="cracked20" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 100.964, 87.0271, -311.02)
-reappear_time = 4.0
 
 [node name="cracked3" parent="platforms" instance=ExtResource("3_4s2xs")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -55.789, 160.504, -93.8742)

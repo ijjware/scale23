@@ -66,7 +66,7 @@ func _physics_process(delta):
 func spit():
 	var thing = stomachs.pop_front()
 	thing.global_position = front.global_position
-	print(front.global_position)
+#	print(front.global_position)
 	var eh = front.global_position.direction_to($aim.global_position)
 	if eh.y < 0: 
 		eh.y = 1

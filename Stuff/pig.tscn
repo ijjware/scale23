@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://crpi3rd1uc7m7"]
+[gd_scene load_steps=7 format=3 uid="uid://crpi3rd1uc7m7"]
 
 [ext_resource type="Script" path="res://Scripts/pig.gd" id="1_tc3u8"]
 [ext_resource type="Texture2D" uid="uid://dq6cvx82ayroo" path="res://Blends/textures/SpritePig.png" id="1_u2s73"]
@@ -43,11 +43,10 @@ shadow_mesh = SubResource("ArrayMesh_t1c3l")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_co36p"]
 points = PackedVector3Array(0.999217, 0.498674, -2.0006, 0.499706, 0.500387, -1.99962, 0.499706, 1.49931, -1.50114, 0.999657, 1.4998, -1.49943, 2, 0.499164, -1.49943, 0.999217, -5.31673e-05, -1.99987, -1.00059, -5.31673e-05, -1.99938, -1.00059, 0.500387, -1.99913, -0.000244617, 1.4998, -1.49943, 0.999657, 1.4998, -0.501006, 1.99956, 0.999604, -0.501006, 1.99912, 0.999359, -1.00046, 2, -0.49927, -0.501006, 2, -5.31673e-05, -1.49821, 0.999657, -1.0002, -1.49943, 0.499266, -0.999955, -1.5009, -0.000244617, -0.999221, -1.50041, -1.00015, -0.499515, -1.49943, -2.5, -5.31673e-05, -1.00022, -2.5, 0.499164, -1.00071, -1.00015, 0.999115, -1.50065, -2.5, 0.499408, -0.500517, -0.000244617, 1.4998, -0.501006, 1.49917, 1.00083, 0.499376, 0.499706, 1.49956, -0.500272, 1.49917, -0.49976, 0.5006, 0.999657, -0.999221, -0.499537, 1.99912, -0.499025, -1.00022, 0.499706, -0.999711, -0.499292, -0.000244617, -0.999221, -0.499537, -2.5, -5.31673e-05, -0.501006, -0.500636, -0.49927, 0.499621, -0.500636, 1.00058, 0.498886)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_b8g4t"]
-radius = 5.30051
-
 [node name="pig" type="CharacterBody3D" groups=["noms"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0321403, 0.49124, 0.00707722)
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("1_tc3u8")
 
 [node name="scalepig_002" type="MeshInstance3D" parent="."]
@@ -58,9 +57,3 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_co36p")
-
-[node name="Area3D" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2.10931, 2.24914e-07)
-shape = SubResource("SphereShape3D_b8g4t")
