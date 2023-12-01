@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=63 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
@@ -22,14 +22,15 @@
 [ext_resource type="Script" path="res://Levels/cacti.gd" id="20_e1yo6"]
 [ext_resource type="Texture2D" uid="uid://brt4shxaa4h3a" path="res://Blends/textures/SpriteBush.png" id="20_sk0rg"]
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="22_6bg3p"]
-[ext_resource type="PackedScene" path="res://Stuff/fence.tscn" id="22_spt18"]
-[ext_resource type="Texture2D" uid="uid://bqbhf44d7etos" path="res://mvoementstuff.png" id="24_wosek"]
+[ext_resource type="PackedScene" uid="uid://7h6dg1yrtngy" path="res://Stuff/fence.tscn" id="22_spt18"]
+[ext_resource type="Texture2D" uid="uid://dxy62bn3jby0i" path="res://mvoementstuff.png" id="24_wosek"]
 [ext_resource type="PackedScene" uid="uid://m4rcgxo18smo" path="res://Stuff/signpost.tscn" id="25_c72pl"]
-[ext_resource type="Texture2D" uid="uid://i1y1rabe64fc" path="res://Illustration3.png" id="26_ei0od"]
 [ext_resource type="Texture2D" uid="uid://dd3d3cot8w1ip" path="res://Stuff/Illustration2.png" id="26_nvfvq"]
 [ext_resource type="Texture2D" uid="uid://d37xrlflerd0b" path="res://3rockup.png" id="27_57ag1"]
 [ext_resource type="PackedScene" uid="uid://bf2jqltopbr66" path="res://Blends/scaleisland.blend" id="27_rn0wg"]
 [ext_resource type="AudioStream" uid="uid://dqm4k4s6seil" path="res://sounds/twinkle2.wav" id="28_wc22q"]
+[ext_resource type="AudioStream" uid="uid://d078d7gi25801" path="res://sounds/144896__hunterscrossbow__windry.wav" id="30_1blgh"]
+[ext_resource type="AudioStream" uid="uid://bgn5wj2tybwyi" path="res://sounds/338706__amichaelwilson__birdsongs.wav" id="31_ab84q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfd18"]
 resource_name = "scaletree_mtl"
@@ -227,16 +228,7 @@ bg_color = Color(0.27451, 0.145098, 0.0941176, 0)
 bg_color = Color(0.176471, 0.172549, 0.227451, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ydje"]
-bg_color = Color(1, 1, 1, 0.662745)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jc5t6"]
-albedo_texture = ExtResource("26_ei0od")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vr8qj"]
-albedo_texture = ExtResource("26_nvfvq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44t81"]
-albedo_texture = ExtResource("27_57ag1")
+bg_color = Color(1, 1, 1, 0)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ki48w")
@@ -10523,7 +10515,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 270.015, 0, -792.225)
 metadata/_edit_group_ = true
 
 [node name="PC" parent="." instance=ExtResource("3_ntu4s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.769, 497.531, -18.1995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.9941, 497.721, -18.1149)
 
 [node name="Spring" parent="." instance=ExtResource("9_46m13")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.302, -3.62814, -18.3535)
@@ -10533,6 +10525,7 @@ transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, 
 
 [node name="cactus" parent="." instance=ExtResource("11_kl0u0")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.245696, 8.75199, 52.2512)
+max_contacts_reported = 10
 
 [node name="Starting" type="Node3D" parent="."]
 script = ExtResource("12_8vcsq")
@@ -10541,6 +10534,7 @@ metadata/_edit_lock_ = true
 [node name="statCam" type="Camera3D" parent="Starting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -927.643, 341.792, 6.1097)
 environment = ExtResource("13_5trou")
+current = true
 far = 5600.0
 
 [node name="PanelStart" parent="Starting/statCam" instance=ExtResource("14_0aer8")]
@@ -10650,6 +10644,7 @@ libraries = {
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="big pig/cake"]
 stream = ExtResource("28_wc22q")
+volume_db = 7.0
 pitch_scale = 0.9
 
 [node name="pig" parent="." instance=ExtResource("14_oo3nr")]
@@ -10692,7 +10687,7 @@ libraries = {
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="hole/cake"]
 stream = ExtResource("28_wc22q")
-volume_db = 5.0
+volume_db = 7.0
 pitch_scale = 0.9
 
 [node name="holebod" type="StaticBody3D" parent="hole"]
@@ -10813,7 +10808,7 @@ libraries = {
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="cacti/cake"]
 stream = ExtResource("28_wc22q")
-volume_db = 5.0
+volume_db = 7.0
 pitch_scale = 0.9
 
 [node name="spot" type="MeshInstance3D" parent="cacti"]
@@ -12926,6 +12921,7 @@ offset_right = 1158.0
 offset_bottom = 652.0
 
 [node name="Panel" type="Panel" parent="StartUi/Control"]
+modulate = Color(0.737255, 0.258824, 0, 1)
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 646.0
@@ -12939,34 +12935,45 @@ texture = ExtResource("24_wosek")
 expand_mode = 2
 
 [node name="golf" parent="." instance=ExtResource("25_c72pl")]
-transform = Transform3D(-2.81556, 0, -6.75508, 0, 7.01607, 0, 6.6263, 0, -2.87028, -362.019, -0.353915, -985.413)
-
-[node name="MeshInstance3D" parent="golf" index="0"]
-material_override = SubResource("StandardMaterial3D_jc5t6")
+transform = Transform3D(5.04918, 0, 5.23209, 0, 7.01607, 0, -5.13235, 0, 5.14731, -362.019, -0.353915, -985.413)
 
 [node name="door" parent="." instance=ExtResource("25_c72pl")]
-transform = Transform3D(-2.58724, -0.0123115, -4.88843, 0.00255763, 5.63233, -0.0191426, 3.50462, -0.0131992, -3.60881, -518.285, -0.415303, -515.718)
+transform = Transform3D(2.39634, 0.012999, 5.07422, 0.00255763, 5.63233, -0.0191426, -3.63782, 0.0125227, 3.34253, -518.285, -0.415303, -515.718)
 
-[node name="MeshInstance3D" parent="door" index="0"]
-material_override = SubResource("StandardMaterial3D_vr8qj")
+[node name="Decal" parent="door" index="0"]
+transform = Transform3D(1, 5.96046e-08, -1.16415e-10, 0, -4.38886e-08, -1, 0, 1, -4.36557e-08, -0.00689697, 1.8689, 0.228271)
+texture_albedo = ExtResource("26_nvfvq")
+texture_normal = ExtResource("26_nvfvq")
 
 [node name="rocks" parent="." instance=ExtResource("25_c72pl")]
-transform = Transform3D(5.26799, 0, 1.6072, 0, 5.89315, 0, 1.85288, 0, -4.56949, 272.418, 0, -728.783)
+transform = Transform3D(-2.71041, 0, -4.23509, 0, 5.89315, 0, -4.88248, 0, 2.35103, 272.418, 0, -728.783)
 
-[node name="MeshInstance3D" parent="rocks" index="0"]
-material_override = SubResource("StandardMaterial3D_44t81")
+[node name="Decal" parent="rocks" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.00689697, 1.8689, 0.228271)
+texture_albedo = ExtResource("27_57ag1")
+texture_normal = ExtResource("27_57ag1")
 
 [node name="big donut" parent="." instance=ExtResource("15_hhhdf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0422, 508.089, -18.3676)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="big donut"]
 stream = ExtResource("28_wc22q")
-volume_db = 5.0
+volume_db = 7.0
 pitch_scale = 0.8
 autoplay = true
 
 [node name="scaleisland" parent="." instance=ExtResource("27_rn0wg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0422, 492.457, -18.3676)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_1blgh")
+volume_db = -30.0
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_ab84q")
+volume_db = 10.0
+autoplay = true
 
 [connection signal="body_entered" from="big pig/Area3D" to="big pig" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="big pig/cake/Area3D" to="big pig/cake" method="_on_area_3d_body_entered" flags=18]
@@ -12976,6 +12983,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0422, 492.457, -18.3676)
 [connection signal="body_entered" from="cacti/spot/Area3D" to="cacti" method="_on_area_3d_body_entered"]
 
 [editable path="scalemountains"]
-[editable path="golf"]
 [editable path="door"]
 [editable path="rocks"]

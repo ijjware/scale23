@@ -1,10 +1,12 @@
-MeshInstance3D
 AudioStreamPlayer3D
+AudioListener3D
+AudioStreamPlayer
 OmniLight3D
 Panel
 TextureRect
 Control
 Node3D
+MeshInstance3D
 CollisionShape3D
 Area3D
 StaticBody3D
@@ -28,5 +30,3 @@ CollisionPolygon3D
 ImporterMeshInstance3D
 AnimationPlayer
 Decal
-PopupPanel
-SpringArm3D
