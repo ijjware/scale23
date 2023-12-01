@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=60 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://m4rcgxo18smo" path="res://Stuff/signpost.tscn" id="25_c72pl"]
 [ext_resource type="Texture2D" uid="uid://dd3d3cot8w1ip" path="res://Stuff/Illustration2.png" id="26_nvfvq"]
 [ext_resource type="Texture2D" uid="uid://d37xrlflerd0b" path="res://3rockup.png" id="27_57ag1"]
+[ext_resource type="PackedScene" uid="uid://bf2jqltopbr66" path="res://Blends/scaleisland.blend" id="27_rn0wg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfd18"]
 resource_name = "scaletree_mtl"
@@ -10511,10 +10512,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 270.015, 0, -792.225)
 metadata/_edit_group_ = true
 
 [node name="PC" parent="." instance=ExtResource("3_ntu4s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.414, 497.721, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.996, 497.721, -18.1149)
 
 [node name="Spring" parent="." instance=ExtResource("9_46m13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8022, 0.191576, 1.43155)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.3039, -3.62814, -18.3535)
 
 [node name="cake" parent="." instance=ExtResource("11_inc58")]
 transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, -19.2803, 5.65994, 32.5271)
@@ -10593,9 +10594,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.56237, 0)
 shape = SubResource("WorldBoundaryShape3D_hc0hr")
 metadata/_edit_lock_ = true
 
-[node name="big donut" parent="." instance=ExtResource("15_hhhdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.6583, 8.0598, -178.129)
-
 [node name="big pig" type="Node3D" parent="."]
 transform = Transform3D(0.594416, 0, -0.804158, 0, 1, 0, 0.804158, 0, 0.594416, 288.022, 0.472157, 347.721)
 script = ExtResource("13_a817g")
@@ -10641,7 +10639,7 @@ libraries = {
 }
 
 [node name="pig" parent="." instance=ExtResource("14_oo3nr")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.494983, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -230.861, 0.494983, -258.331)
 
 [node name="hole" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -440.331, -0.3996, -985.594)
@@ -12935,6 +12933,12 @@ transform = Transform3D(-2.71041, 0, -4.23509, 0, 5.89315, 0, -4.88248, 0, 2.351
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.00689697, 1.8689, 0.228271)
 texture_albedo = ExtResource("27_57ag1")
 texture_normal = ExtResource("27_57ag1")
+
+[node name="big donut" parent="." instance=ExtResource("15_hhhdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0422, 508.089, -18.3676)
+
+[node name="scaleisland" parent="." instance=ExtResource("27_rn0wg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0422, 492.457, -18.3676)
 
 [connection signal="body_entered" from="big pig/Area3D" to="big pig" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="big pig/cake/Area3D" to="big pig/cake" method="_on_area_3d_body_entered" flags=18]
