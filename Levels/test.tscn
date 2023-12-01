@@ -220,10 +220,10 @@ radius = 4.33884
 bg_color = Color(0.180392, 0.145098, 0.219608, 0.639216)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjdng"]
-bg_color = Color(0.27451, 0.145098, 0.0941176, 0.270588)
+bg_color = Color(0.27451, 0.145098, 0.0941176, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7r13j"]
-bg_color = Color(0.176471, 0.172549, 0.227451, 0.388235)
+bg_color = Color(0.176471, 0.172549, 0.227451, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ydje"]
 bg_color = Color(1, 1, 1, 0)
