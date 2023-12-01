@@ -10526,6 +10526,7 @@ metadata/_edit_group_ = true
 
 [node name="PC" parent="." instance=ExtResource("3_ntu4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.9941, 497.721, -18.1149)
+ball_grow_factor = 0.3
 
 [node name="Spring" parent="." instance=ExtResource("9_46m13")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.302, -3.62814, -18.3535)

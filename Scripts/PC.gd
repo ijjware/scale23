@@ -13,7 +13,7 @@ var spd = 2
 var can_eat = []
 var off = false
 var walktime = 0
-@export var ball_grow_factor = 1.0
+@export var ball_grow_factor = .3
 @onready var ball = $wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/CharacterBody3D/CollisionShape3D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
