@@ -11,6 +11,7 @@ var speedReduction = 1.5
 var jumpReduction = 5
 var spd = 2
 var can_eat = []
+var off = false
 @export var ball_grow_factor = 1
 @onready var ball = $wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/CharacterBody3D/CollisionShape3D
 
@@ -24,6 +25,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _physics_process(delta):
 	# Add the gravity.
+	if off:
+		return
 	if not is_on_floor():
 		velocity.y -= gravity * delta *1
 	else: airJumps = 1

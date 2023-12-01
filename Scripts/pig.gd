@@ -1,6 +1,6 @@
 extends CharacterBody3D
 var isSwallowed = false
-@export var speed = 8
+@export var speed = 50
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var start_position = global_position
 @onready var target = global_position

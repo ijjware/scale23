@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=53 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dwwpeiuxekj13" path="res://Blends/ScaleCake.blend" id="18_bl7b7"]
 [ext_resource type="Script" path="res://Levels/cacti.gd" id="20_e1yo6"]
 [ext_resource type="Texture2D" uid="uid://brt4shxaa4h3a" path="res://Blends/textures/SpriteBush.png" id="20_sk0rg"]
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="22_6bg3p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfd18"]
 resource_name = "scaletree_mtl"
@@ -207,6 +208,15 @@ height = 0.286
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hee2p"]
 radius = 4.33884
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpgql"]
+bg_color = Color(0.180392, 0.145098, 0.219608, 0.639216)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjdng"]
+bg_color = Color(0.27451, 0.145098, 0.0941176, 0.270588)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7r13j"]
+bg_color = Color(0.176471, 0.172549, 0.227451, 0.388235)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ki48w")
@@ -10493,7 +10503,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 270.015, 0, -792.225)
 metadata/_edit_group_ = true
 
 [node name="PC" parent="." instance=ExtResource("3_ntu4s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.414, 1126.76, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.414, 296.033, 0)
 
 [node name="Spring" parent="." instance=ExtResource("9_46m13")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8022, 0.191576, 1.43155)
@@ -12769,6 +12779,108 @@ transform = Transform3D(0.997823, 0, -0.0659427, 0, 1, 0, 0.0659427, 0, 0.997823
 
 [node name="tree1160" parent="forest" instance=ExtResource("12_yfbw4")]
 transform = Transform3D(0.997823, 0, -0.0659427, 0, 1, 0, 0.0659427, 0, 0.997823, 50.2013, 5.81696, -144.547)
+
+[node name="UI" type="Node3D" parent="."]
+script = ExtResource("22_6bg3p")
+
+[node name="PanelContainer" type="PanelContainer" parent="UI"]
+custom_minimum_size = Vector2(100, 50)
+offset_left = 1052.0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 49.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dpgql")
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/PanelContainer"]
+layout_mode = 2
+
+[node name="Cake" type="RichTextLabel" parent="UI/PanelContainer/CenterContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Cakes : 15[/center]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="EndUI" type="Node3D" parent="."]
+
+[node name="Control" type="Control" parent="EndUI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="Panel" type="Panel" parent="EndUI/Control"]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bjdng")
+
+[node name="CenterContainer" type="CenterContainer" parent="EndUI/Control"]
+layout_mode = 0
+offset_top = 274.0
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="Panel" type="Panel" parent="EndUI/Control/CenterContainer"]
+custom_minimum_size = Vector2(400, 340)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7r13j")
+
+[node name="Time" type="RichTextLabel" parent="EndUI/Control/CenterContainer/Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 125.0
+offset_right = 401.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0.556863, 1, 0.407843, 1)
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center]7:05[/center]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="EndUI/Control/CenterContainer/Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 216.0
+offset_right = 401.0
+offset_bottom = 280.0
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center] Cakes [/center]"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EndUI/Control/CenterContainer/Panel"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 19.0
+offset_right = 400.0
+offset_bottom = 88.0
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]Finished!!![/center]"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="EndUI/Control/CenterContainer/Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 97.0
+offset_right = 401.0
+offset_bottom = 160.0
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Time[/center]"
+
+[node name="Cake" type="RichTextLabel" parent="EndUI/Control/CenterContainer/Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 242.0
+offset_right = 408.0
+offset_bottom = 330.0
+theme_override_colors/default_color = Color(0.556863, 1, 0.407843, 1)
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center] 8 / 10 [/center]"
 
 [connection signal="body_entered" from="big pig/Area3D" to="big pig" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="big pig/cake/Area3D" to="big pig/cake" method="_on_area_3d_body_entered" flags=18]
