@@ -10,3 +10,4 @@ res://Levels/test.tscn
 res://Scripts/UI.gd
 res://Scripts/pig.gd
 res://Scripts/donut.gd
+res://Levels/Starting.gd

@@ -11,3 +11,5 @@ func _process(delta):
 	cam.look_at(self.global_position)
 	if Input.is_action_just_pressed("start"):
 		queue_free()
+		$"../StartUi/Control".visible = false
+		$"../UI/PanelContainer".visible = true

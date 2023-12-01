@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=56 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://brt4shxaa4h3a" path="res://Blends/textures/SpriteBush.png" id="20_sk0rg"]
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="22_6bg3p"]
 [ext_resource type="PackedScene" path="res://Stuff/fence.tscn" id="22_spt18"]
+[ext_resource type="Texture2D" uid="uid://dxy62bn3jby0i" path="res://mvoementstuff.png" id="24_wosek"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfd18"]
 resource_name = "scaletree_mtl"
@@ -218,6 +219,9 @@ bg_color = Color(0.27451, 0.145098, 0.0941176, 0.270588)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7r13j"]
 bg_color = Color(0.176471, 0.172549, 0.227451, 0.388235)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ydje"]
+bg_color = Color(0.6, 0.6, 0.839216, 0.443137)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ki48w")
@@ -10527,6 +10531,7 @@ far = 5600.0
 
 [node name="PanelStart" parent="Starting/statCam" instance=ExtResource("14_0aer8")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1.10617, -2.20714)
+visible = false
 
 [node name="invisible walls" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
@@ -12788,6 +12793,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -548.245, 1.56237, -505.611)
 script = ExtResource("22_6bg3p")
 
 [node name="PanelContainer" type="PanelContainer" parent="UI"]
+visible = false
 custom_minimum_size = Vector2(100, 50)
 offset_left = 1052.0
 offset_top = -1.0
@@ -12885,6 +12891,27 @@ theme_override_colors/default_color = Color(0.556863, 1, 0.407843, 1)
 theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
 text = "[center] 8 / 10 [/center]"
+
+[node name="StartUi" type="Node3D" parent="."]
+
+[node name="Control" type="Control" parent="StartUi"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1158.0
+offset_bottom = 652.0
+
+[node name="Panel" type="Panel" parent="StartUi/Control"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ydje")
+
+[node name="TextureRect" type="TextureRect" parent="StartUi/Control/Panel"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 646.0
+texture = ExtResource("24_wosek")
+expand_mode = 2
 
 [connection signal="body_entered" from="big pig/Area3D" to="big pig" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="big pig/cake/Area3D" to="big pig/cake" method="_on_area_3d_body_entered" flags=18]
