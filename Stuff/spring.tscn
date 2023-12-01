@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0sfempynokp"]
+[gd_scene load_steps=6 format=3 uid="uid://c0sfempynokp"]
 
 [ext_resource type="Script" path="res://Scripts/spring.gd" id="1_aaude"]
 [ext_resource type="PackedScene" uid="uid://b6n4qcdqwfpvc" path="res://Blends/scalespring.blend" id="1_r4uer"]
 [ext_resource type="AudioStream" uid="uid://3vct7gavumer" path="res://sounds/sproing.wav" id="3_mwant"]
+[ext_resource type="PackedScene" uid="uid://4v55gybh2r13" path="res://Blends/PanelS.blend" id="3_s4y5s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xtxjo"]
 size = Vector3(6.45753, 5, 6.47758)
@@ -23,6 +24,10 @@ shape = SubResource("BoxShape3D_xtxjo")
 [node name="sproinger" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(-4.37113e-08, 0, -1, 0, 1, 0, 1, 0, -4.37113e-08, 8.14886, 10.1958, -3.11253)
 stream = ExtResource("3_mwant")
+
+[node name="PanelS" parent="." instance=ExtResource("3_s4y5s")]
+transform = Transform3D(-1.62894e-07, 0, -0.994686, 0, 2.6428, 0, 3.72659, 0, -4.34791e-08, 8.14886, 10.1958, -3.11253)
+visible = false
 
 [connection signal="body_entered" from="TriggerZone" to="." method="_on_trigger_zone_body_entered"]
 [connection signal="body_exited" from="TriggerZone" to="." method="_on_trigger_zone_body_exited"]
