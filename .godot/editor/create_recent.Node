@@ -1,14 +1,7 @@
-RichTextLabel
-VSplitContainer
-CenterContainer
-Panel
-Control
-Node3D
-Timer
-PanelContainer
-StaticBody3D
 CollisionShape3D
 Area3D
+StaticBody3D
+Node3D
 RigidBody3D
 CharacterBody3D
 NavigationAgent3D
@@ -16,6 +9,7 @@ NavigationRegion3D
 BoneAttachment3D
 MeshInstance3D
 CSGSphere3D
+Timer
 PhysicalBone3D
 Skeleton3D
 Marker3D
@@ -29,4 +23,10 @@ CollisionPolygon3D
 ImporterMeshInstance3D
 AnimationPlayer
 Decal
+Panel
 PopupPanel
+SpringArm3D
+CPUParticles3D
+Marker3D
+PhysicalBone3D
+Skeleton3D
