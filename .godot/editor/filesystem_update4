@@ -9,3 +9,7 @@ res://Stuff/spring.tscn
 res://Stuff/pig.tscn
 res://Levels/test.tscn
 res://Stuff/cake.tscn
+res://Scripts/bigpig.gd
+res://Levels/cacti.gd
+res://Stuff/libra.tscn
+res://Scripts/libra.gd

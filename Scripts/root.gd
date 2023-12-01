@@ -1,7 +1,7 @@
 extends Node3D
 
 var level_time = 0.0
-@export var total_cakes = 8
+@export var total_cakes = 7
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -13,3 +13,4 @@ func _on_hole_entered(body):
 			$hole/cake.visible = true
 			$hole/cake/Area3D.set_deferred("monitorable", true)
 			$hole/cake/Area3D.set_deferred("monitoring", true)
+			$hole/cake/AudioStreamPlayer3D.play()

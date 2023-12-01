@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dkb8m3ulumvmx"]
+[gd_scene load_steps=18 format=3 uid="uid://dkb8m3ulumvmx"]
 
 [ext_resource type="Script" path="res://Scripts/libra.gd" id="1_ewe6b"]
 [ext_resource type="PackedScene" uid="uid://ejkf2t0dslfr" path="res://Blends/scalescale.blend" id="1_rmj1f"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bf2jqltopbr66" path="res://Blends/scaleisland.blend" id="4_pwfb0"]
 [ext_resource type="Script" path="res://Scripts/cake.gd" id="5_wroex"]
 [ext_resource type="PackedScene" uid="uid://dwwpeiuxekj13" path="res://Blends/ScaleCake.blend" id="6_8bgr0"]
+[ext_resource type="AudioStream" uid="uid://dqm4k4s6seil" path="res://sounds/twinkle2.wav" id="6_wdo4v"]
 [ext_resource type="PackedScene" uid="uid://vr2gprn1wsbh" path="res://Stuff/rock.tscn" id="7_iu4gq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l0u3o"]
@@ -97,6 +98,11 @@ shape = SubResource("BoxShape3D_iudv5")
 libraries = {
 "": SubResource("AnimationLibrary_o4jw5")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="scaleisland/cake"]
+stream = ExtResource("6_wdo4v")
+volume_db = 5.0
+pitch_scale = 0.9
 
 [node name="Area3D" type="Area3D" parent="scaleisland"]
 

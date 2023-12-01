@@ -44,6 +44,7 @@ func win():
 		$scaleisland/cake.visible = true
 		$scaleisland/cake/Area3D.set_deferred("monitorable", true)
 		$scaleisland/cake/Area3D.set_deferred("monitoring", true)
+		$scaleisland/cake/AudioStreamPlayer3D.play()
 		rock1.queue_free()
 		rock2.queue_free()
 		rock3.queue_free()

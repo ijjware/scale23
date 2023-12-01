@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=61 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dd3d3cot8w1ip" path="res://Stuff/Illustration2.png" id="26_nvfvq"]
 [ext_resource type="Texture2D" uid="uid://d37xrlflerd0b" path="res://3rockup.png" id="27_57ag1"]
 [ext_resource type="PackedScene" uid="uid://bf2jqltopbr66" path="res://Blends/scaleisland.blend" id="27_rn0wg"]
+[ext_resource type="AudioStream" uid="uid://dqm4k4s6seil" path="res://sounds/twinkle2.wav" id="28_wc22q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfd18"]
 resource_name = "scaletree_mtl"
@@ -10512,10 +10513,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 270.015, 0, -792.225)
 metadata/_edit_group_ = true
 
 [node name="PC" parent="." instance=ExtResource("3_ntu4s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.996, 497.721, -18.1149)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.9941, 497.721, -18.1149)
 
 [node name="Spring" parent="." instance=ExtResource("9_46m13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.3039, -3.62814, -18.3535)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.302, -3.62814, -18.3535)
 
 [node name="cake" parent="." instance=ExtResource("11_inc58")]
 transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, -19.2803, 5.65994, 32.5271)
@@ -10619,7 +10620,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86606, 5.69812, 0.189089)
 shape = SubResource("BoxShape3D_l10tb")
 
 [node name="cake" type="Node3D" parent="big pig"]
-transform = Transform3D(0.787247, 0, 0.616637, 0, 1, 0, -0.616637, 0, 0.787247, -3.54346, 4.29112, 12.7498)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.54346, 4.29112, 12.7498)
 visible = false
 script = ExtResource("17_hl721")
 
@@ -10637,6 +10638,10 @@ shape = SubResource("BoxShape3D_iudv5")
 libraries = {
 "": SubResource("AnimationLibrary_o4jw5")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="big pig/cake"]
+stream = ExtResource("28_wc22q")
+pitch_scale = 0.9
 
 [node name="pig" parent="." instance=ExtResource("14_oo3nr")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -230.861, 0.494983, -258.331)
@@ -10675,6 +10680,11 @@ shape = SubResource("BoxShape3D_iudv5")
 libraries = {
 "": SubResource("AnimationLibrary_o4jw5")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="hole/cake"]
+stream = ExtResource("28_wc22q")
+volume_db = 5.0
+pitch_scale = 0.9
 
 [node name="holebod" type="StaticBody3D" parent="hole"]
 collision_layer = 2
@@ -10791,6 +10801,11 @@ shape = SubResource("BoxShape3D_iudv5")
 libraries = {
 "": SubResource("AnimationLibrary_o4jw5")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="cacti/cake"]
+stream = ExtResource("28_wc22q")
+volume_db = 5.0
+pitch_scale = 0.9
 
 [node name="spot" type="MeshInstance3D" parent="cacti"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.8779, 0, 3.45467)
@@ -12936,6 +12951,12 @@ texture_normal = ExtResource("27_57ag1")
 
 [node name="big donut" parent="." instance=ExtResource("15_hhhdf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0422, 508.089, -18.3676)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="big donut"]
+stream = ExtResource("28_wc22q")
+volume_db = 5.0
+pitch_scale = 0.8
+autoplay = true
 
 [node name="scaleisland" parent="." instance=ExtResource("27_rn0wg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0422, 492.457, -18.3676)
