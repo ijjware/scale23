@@ -1,11 +1,6 @@
 res://default_bus_layout.tres
-res://Stuff/signpost.tscn
+res://Levels/test.tscn
 res://Scripts/PC.gd
 res://Scripts/root.gd
 res://Scripts/spring.gd
 res://Levels/sky.tres
-res://Levels/test.tscn
-res://Character/PC.tscn
-res://Stuff/spring.tscn
-res://Stuff/pig.tscn
-res://Levels/node_3d.tscn
