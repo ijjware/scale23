@@ -1,5 +1,9 @@
 extends Node3D
 
+func _process(delta):
+	pass
+	
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimationPlayer.play("rotate")

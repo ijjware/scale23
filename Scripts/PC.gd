@@ -12,9 +12,9 @@ var jumpReduction = 5
 var spd = 2
 var can_eat = []
 var off = false
+var walktime = 0
 @export var ball_grow_factor = 1
 @onready var ball = $wholeguy/Armature_001/Skeleton3D/BoneAttachment3D/CharacterBody3D/CollisionShape3D
-
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -33,10 +33,12 @@ func _physics_process(delta):
 #	$followDAD.transform = $followDAD.transform.rotated(Vector3(0,1,0), (.07*Input.get_last_mouse_velocity().normalized().x))
 	if Input.is_action_just_pressed("spit") and !stomachs.is_empty():
 		spit()
+		$spitter.play()
 	if Input.is_action_just_pressed("eat") and !can_eat.is_empty() and stomachs.size() < stomachSize:
 		add_stomach(can_eat.pop_front())
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or airJumps>0):
+		$jumper.play()
 		velocity.y = JUMP_VELOCITY - (stomachs.size() * jumpReduction)
 		if !is_on_floor(): airJumps -= 1
 #		print(Input.get_last_mouse_velocity())
@@ -46,6 +48,7 @@ func _physics_process(delta):
 	var direction = (transform.basis * Vector3(input_dir.x, input_dir.y, 0)).normalized()
 #	print(input_dir)
 	if direction:
+		walkwav()
 		spd = move_toward(spd, SPEED, .5)
 		velocity.x = direction.x * (spd - (stomachs.size()*speedReduction))
 		velocity.z = direction.z * (spd - (stomachs.size()*speedReduction))
@@ -98,11 +101,17 @@ func add_stomach(thing):
 	#ball.scale(Vector3(4, 4, 4))
 
 func eat_cake():
+	$caker.play()
 	stomachSize += 1
 
 func victory():
 	$wholeguy/AnimationTree["parameters/playback"].travel("VictoryPose")
 
+func walkwav():
+	walktime +=1
+	if walktime >= 30 && is_on_floor(): 
+		$stepper.play(0.0)
+		walktime = 0
 
 func _on_interact_area_body_entered(body):
 	if body.is_in_group("noms"):

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj2kgbvs3x3dr"]
+[gd_scene load_steps=7 format=3 uid="uid://dj2kgbvs3x3dr"]
 
 [ext_resource type="Script" path="res://Scripts/cake.gd" id="1_e3sh2"]
 [ext_resource type="PackedScene" uid="uid://dwwpeiuxekj13" path="res://Blends/ScaleCake.blend" id="1_ohiat"]
+[ext_resource type="AudioStream" uid="uid://dqm4k4s6seil" path="res://sounds/twinkle2.wav" id="3_hd5hf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iudv5"]
 size = Vector3(1.65669, 1.32159, 2.08875)
@@ -29,7 +30,6 @@ _data = {
 }
 
 [node name="cake" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_e3sh2")
 
 [node name="ScaleCake" parent="." instance=ExtResource("1_ohiat")]
@@ -44,5 +44,10 @@ shape = SubResource("BoxShape3D_iudv5")
 libraries = {
 "": SubResource("AnimationLibrary_o4jw5")
 }
+
+[node name="shiner" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_hd5hf")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://m4rcgxo18smo" path="res://Stuff/signpost.tscn" id="25_c72pl"]
 [ext_resource type="Texture2D" uid="uid://dd3d3cot8w1ip" path="res://Stuff/Illustration2.png" id="26_nvfvq"]
 [ext_resource type="Texture2D" uid="uid://d37xrlflerd0b" path="res://3rockup.png" id="27_57ag1"]
+[ext_resource type="PackedScene" uid="uid://7h6dg1yrtngy" path="res://Stuff/fence.tscn" id="22_spt18"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfd18"]
 resource_name = "scaletree_mtl"
