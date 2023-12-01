@@ -1,3 +1,4 @@
+AudioStreamPlayer
 AudioStreamPlayer3D
 OmniLight3D
 Panel
@@ -30,4 +31,3 @@ AnimationPlayer
 Decal
 PopupPanel
 SpringArm3D
-CPUParticles3D

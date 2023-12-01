@@ -10,8 +10,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("interact") and current_body != null:
-		$PanelS.visible = false
+	if Input.is_action_just_pressed("jump") and current_body != null:
+#		$PanelS.visible = false
 		var weight = 1
 		if current_body.get('stomachs') != null:
 			# I add by one so that I don't run into 0s
@@ -26,13 +26,13 @@ func _process(delta):
 func _on_trigger_zone_body_entered(body):
 	#display context button
 	if body.name == "PC":
-		$PanelS.visible = true
+#		$PanelS.visible = true
 		current_body = body
 #		print (body.name + "in" +name)
-
+#
 func _on_trigger_zone_body_exited(body):
 	#hide context button
 	if body.name == "PC":
-		$PanelS.visible = false
+#		$PanelS.visible = false
 		current_body = null
 #		print (body.name + "out" +name)

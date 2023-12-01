@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=63 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://d37xrlflerd0b" path="res://3rockup.png" id="27_57ag1"]
 [ext_resource type="PackedScene" uid="uid://bf2jqltopbr66" path="res://Blends/scaleisland.blend" id="27_rn0wg"]
 [ext_resource type="AudioStream" uid="uid://dqm4k4s6seil" path="res://sounds/twinkle2.wav" id="28_wc22q"]
+[ext_resource type="AudioStream" uid="uid://d078d7gi25801" path="res://sounds/144896__hunterscrossbow__windry.wav" id="30_1blgh"]
+[ext_resource type="AudioStream" uid="uid://bgn5wj2tybwyi" path="res://sounds/338706__amichaelwilson__birdsongs.wav" id="31_ab84q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfd18"]
 resource_name = "scaletree_mtl"
@@ -12960,6 +12962,16 @@ autoplay = true
 
 [node name="scaleisland" parent="." instance=ExtResource("27_rn0wg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0422, 492.457, -18.3676)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_1blgh")
+volume_db = -30.0
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_ab84q")
+volume_db = 10.0
+autoplay = true
 
 [connection signal="body_entered" from="big pig/Area3D" to="big pig" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="big pig/cake/Area3D" to="big pig/cake" method="_on_area_3d_body_entered" flags=18]
