@@ -20,6 +20,7 @@ func _process(delta):
 		current_body.velocity.y = spring_amount + weight_factor
 		current_body.move_and_slide()
 		current_body = null
+		$sproinger.play()
 
 #player stands in trigger zone
 func _on_trigger_zone_body_entered(body):

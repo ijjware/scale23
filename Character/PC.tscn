@@ -1,7 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://c3uxus1cdydul"]
+[gd_scene load_steps=32 format=3 uid="uid://c3uxus1cdydul"]
 
 [ext_resource type="Script" path="res://Scripts/PC.gd" id="1_l6nas"]
 [ext_resource type="PackedScene" uid="uid://bgxcp32sx6v0" path="res://Blends/wholeguy.blend" id="2_hbx8r"]
+[ext_resource type="AudioStream" uid="uid://cchwc83r5plo3" path="res://sounds/step.wav" id="3_0mokv"]
+[ext_resource type="AudioStream" uid="uid://jeq5pn05a48o" path="res://sounds/ptooey.wav" id="4_u0468"]
+[ext_resource type="AudioStream" uid="uid://b27jw4cs00edg" path="res://sounds/collect.wav" id="5_7dw0s"]
+[ext_resource type="AudioStream" uid="uid://dycdjrwmqdxca" path="res://sounds/Jump.wav" id="6_4cg5v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3fb2p"]
 size = Vector3(2.75898, 7.43406, 2.30234)
@@ -233,6 +237,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41736, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
 transform = Transform3D(4.67, 0, 0, 0, 4.67, 0, 0, 0, 4.67, 0.155725, 2.88931, 0.134182)
 shape = SubResource("CylinderShape3D_0c0kn")
+
+[node name="stepper" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_0mokv")
+
+[node name="spitter" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_u0468")
+
+[node name="caker" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_7dw0s")
+
+[node name="jumper" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_4cg5v")
 
 [connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]
