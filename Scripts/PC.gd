@@ -120,3 +120,9 @@ func _on_interact_area_body_entered(body):
 func _on_interact_area_body_exited(body):
 	if body.is_in_group("noms"):
 		can_eat.erase(body)
+
+func _on_animation_tree_animation_started(anim_name):
+	if anim_name == "BallSwing":
+		$slapper.play()
+		pass
+	pass # Replace with function body.

@@ -1,5 +1,6 @@
-AudioStreamPlayer
 AudioStreamPlayer3D
+AudioListener3D
+AudioStreamPlayer
 OmniLight3D
 Panel
 TextureRect
@@ -29,5 +30,3 @@ CollisionPolygon3D
 ImporterMeshInstance3D
 AnimationPlayer
 Decal
-PopupPanel
-SpringArm3D

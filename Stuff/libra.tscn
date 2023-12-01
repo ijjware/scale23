@@ -101,7 +101,7 @@ libraries = {
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="scaleisland/cake"]
 stream = ExtResource("6_wdo4v")
-volume_db = 5.0
+volume_db = 7.0
 pitch_scale = 0.9
 
 [node name="Area3D" type="Area3D" parent="scaleisland"]

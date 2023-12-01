@@ -10525,6 +10525,7 @@ transform = Transform3D(0.871679, 0, 0.490078, 0, 1, 0, -0.490078, 0, 0.871679, 
 
 [node name="cactus" parent="." instance=ExtResource("11_kl0u0")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.245696, 8.75199, 52.2512)
+max_contacts_reported = 10
 
 [node name="Starting" type="Node3D" parent="."]
 script = ExtResource("12_8vcsq")
@@ -10643,6 +10644,7 @@ libraries = {
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="big pig/cake"]
 stream = ExtResource("28_wc22q")
+volume_db = 7.0
 pitch_scale = 0.9
 
 [node name="pig" parent="." instance=ExtResource("14_oo3nr")]
@@ -10685,7 +10687,7 @@ libraries = {
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="hole/cake"]
 stream = ExtResource("28_wc22q")
-volume_db = 5.0
+volume_db = 7.0
 pitch_scale = 0.9
 
 [node name="holebod" type="StaticBody3D" parent="hole"]
@@ -10806,7 +10808,7 @@ libraries = {
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="cacti/cake"]
 stream = ExtResource("28_wc22q")
-volume_db = 5.0
+volume_db = 7.0
 pitch_scale = 0.9
 
 [node name="spot" type="MeshInstance3D" parent="cacti"]
@@ -12956,7 +12958,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0422, 508.089, -18.3676)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="big donut"]
 stream = ExtResource("28_wc22q")
-volume_db = 5.0
+volume_db = 7.0
 pitch_scale = 0.8
 autoplay = true
 
