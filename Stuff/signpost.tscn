@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://m4rcgxo18smo"]
+[gd_scene load_steps=5 format=3 uid="uid://m4rcgxo18smo"]
 
 [ext_resource type="ArrayMesh" uid="uid://exvt81yaqa5" path="res://signpost.obj" id="1_80wwq"]
 [ext_resource type="Texture2D" uid="uid://bdhqqfsdj5qpp" path="res://canyon1.png" id="2_k8nw6"]
+[ext_resource type="Texture2D" uid="uid://bx6gy4pm57y1" path="res://Stuff/Illustration3.png" id="2_pocrh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_teank"]
 albedo_color = Color(0.580392, 0.462745, 0.368627, 1)
 
 [node name="Signpost" type="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0427, 1.56237, 10.5304)
 material_override = SubResource("StandardMaterial3D_teank")
 mesh = ExtResource("1_80wwq")
 
 [node name="Decal" type="Decal" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.00689411, 1.8689, 0.228273)
 size = Vector3(2.63727, 0.0962928, 1.23879)
-texture_albedo = ExtResource("2_k8nw6")
+texture_albedo = ExtResource("2_pocrh")
 texture_normal = ExtResource("2_k8nw6")
