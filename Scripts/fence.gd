@@ -7,8 +7,7 @@ func _on_animation_player_animation_started(anim_name):
 		$StaticBody3D/door.queue_free()
 		$zone.queue_free()
 
-
 func _on_zone_body_entered(body):
 	if body.name == "PC":
-		if body.stomachs.size() == triggerWeight:
+		if body.stomachs.size() >= triggerWeight:
 			$Gate/AnimationPlayer.play("CubeAction")
