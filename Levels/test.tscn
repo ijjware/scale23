@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cl0i3dkuxukal"]
+[gd_scene load_steps=50 format=3 uid="uid://cl0i3dkuxukal"]
 
 [ext_resource type="Script" path="res://Scripts/root.gd" id="1_ki48w"]
 [ext_resource type="PackedScene" uid="uid://djofc4nb5tu2f" path="res://Blends/scalemountains.blend" id="2_eyldp"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dwwpeiuxekj13" path="res://Blends/ScaleCake.blend" id="18_bl7b7"]
 [ext_resource type="Script" path="res://Levels/cacti.gd" id="20_e1yo6"]
 [ext_resource type="Texture2D" uid="uid://brt4shxaa4h3a" path="res://Blends/textures/SpriteBush.png" id="20_sk0rg"]
+[ext_resource type="PackedScene" uid="uid://7h6dg1yrtngy" path="res://Stuff/fence.tscn" id="22_spt18"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfd18"]
 resource_name = "scaletree_mtl"
@@ -12769,6 +12770,9 @@ transform = Transform3D(0.997823, 0, -0.0659427, 0, 1, 0, 0.0659427, 0, 0.997823
 
 [node name="tree1160" parent="forest" instance=ExtResource("12_yfbw4")]
 transform = Transform3D(0.997823, 0, -0.0659427, 0, 1, 0, 0.0659427, 0, 0.997823, 50.2013, 5.81696, -144.547)
+
+[node name="fence" parent="." instance=ExtResource("22_spt18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -548.245, 1.56237, -505.611)
 
 [connection signal="body_entered" from="big pig/Area3D" to="big pig" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="big pig/cake/Area3D" to="big pig/cake" method="_on_area_3d_body_entered" flags=18]

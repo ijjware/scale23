@@ -3,7 +3,7 @@ res://Scripts/PC.gd
 res://Scripts/root.gd
 res://Scripts/spring.gd
 res://Levels/sky.tres
-res://Levels/cacti.gd
-res://Character/PC.tscn
-res://Stuff/libra.tscn
-res://Stuff/tree.tscn
+res://fence.tscn
+res://Stuff/fence.gd
+res://Stuff/fence.tscn
+res://Scripts/fence.gd
