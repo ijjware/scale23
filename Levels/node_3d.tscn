@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_hb6pi"]
 size = Vector3(434.938, 1.75516, 883.664)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="floor" type="RigidBody3D" parent="."]
 freeze = true

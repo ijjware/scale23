@@ -1,10 +1,10 @@
+MeshInstance3D
 AudioStreamPlayer3D
 OmniLight3D
 Panel
 TextureRect
 Control
 Node3D
-MeshInstance3D
 CollisionShape3D
 Area3D
 StaticBody3D
@@ -30,4 +30,3 @@ AnimationPlayer
 Decal
 PopupPanel
 SpringArm3D
-CPUParticles3D
